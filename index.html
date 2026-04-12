@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Joy Olusanya · NLP Researcher & Linguist</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --bg:#0D0F0E;
+      --surface:#141716;
+      --border:#2A2E2C;
+      --text:#E8EAE9;
+      --muted:#8A9490;
+      --green:#4ADE80;
+    }
+
+    body{
+      margin:0;
+      font-family:'Inter',sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+
+    nav{
+      position:fixed;
+      top:0;
+      width:100%;
+      height:60px;
+      background:rgba(13,15,14,0.9);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:0 2rem;
+      border-bottom:1px solid var(--border);
+      z-index:1000;
+    }
+
+    nav a{
+      color:var(--muted);
+      text-decoration:none;
+      margin-left:1rem;
+      font-size:12px;
+      text-transform:uppercase;
+    }
+
+    nav a:hover{color:var(--green);}
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    /* LANGUAGE BACKGROUND */
+    .lang-bg{
+      position:absolute;
+      inset:0;
+      overflow:hidden;
+      z-index:0;
+    }
+
+    .lang{
+      position:absolute;
+      color:rgba(74,222,128,0.12);
+      animation:floatLang linear infinite;
+      white-space:nowrap;
+    }
+
+    @keyframes floatLang{
+      0%{transform:translateY(100vh); opacity:0;}
+      10%{opacity:1;}
+      90%{opacity:1;}
+      100%{transform:translateY(-20vh); opacity:0;}
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:1;
+      max-width:700px;
+      padding:2rem;
+    }
+
+    h1{
+      font-family:'Playfair Display',serif;
+      font-size:56px;
+      margin:0;
+    }
+
+    h1 span{color:var(--green);}
+
+    .hero p{
+      color:var(--muted);
+      margin:1rem 0;
+    }
+
+    .btn{
+      display:inline-block;
+      margin:0.5rem;
+      padding:10px 20px;
+      border:1px solid var(--border);
+      border-radius:4px;
+      font-size:13px;
+    }
+
+    .btn.primary{
+      background:var(--green);
+      color:#000;
+      border:none;
+    }
+
+    section{
+      padding:5rem 2rem;
+      max-width:900px;
+      margin:auto;
+    }
+
+    h2{
+      font-family:'Playfair Display',serif;
+      margin-bottom:1rem;
+    }
+
+    .card{
+      background:var(--surface);
+      border:1px solid var(--border);
+      padding:1.2rem;
+      margin-bottom:1rem;
+      border-radius:6px;
+    }
+
+    footer{
+      text-align:center;
+      padding:2rem;
+      border-top:1px solid var(--border);
+      color:var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div>Joy Olusanya</div>
+  <div>
+    <a href="#research">Research</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="hero">
+
+  <!-- BACKGROUND -->
+  <div class="lang-bg" id="langBg"></div>
+
+  <div class="hero-content">
+    <h1>Joy <span>Olusanya</span></h1>
+    <p>NLP Researcher · African Languages · LLM Evaluation</p>
+    <p>
+      Linguistics graduate building datasets, evaluation pipelines, and multilingual NLP systems for low-resource African languages.
+    </p>
+
+    <a href="mailto:your@email.com" class="btn primary">Contact</a>
+    <a href="https://github.com/YOUR_USERNAME" class="btn">GitHub</a>
+  </div>
+
+</div>
+
+<section id="research">
+<h2>Research</h2>
+
+<div class="card">
+<b>Yoruba ASR Research</b><br/>
+Evaluating tone recognition in transformer-based ASR systems.
+</div>
+
+<div class="card">
+<b>Yoruba Proverb Classification</b><br/>
+Transformer-based semantic classification of cultural text.
+</div>
+
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+
+<div class="card">
+<b>Nigerian Pidgin Sentiment Analysis</b><br/>
+Zero-shot evaluation using LLMs.
+</div>
+
+<div class="card">
+<b>mBART Translation Evaluation</b><br/>
+BLEU and ROUGE-based evaluation pipeline.
+</div>
+
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+
+<div class="card">
+NLP Researcher — Tonative
+</div>
+
+<div class="card">
+ML Engineer — YorLect
+</div>
+
+</section>
+
+<section id="teaching">
+<h2>Teaching</h2>
+
+<div class="card">
+AI Mentor — LevelUp Techies
+</div>
+
+<div class="card">
+Deep Learning Co-Lead — Data Science Nigeria
+</div>
+
+</section>
+
+<section id="blog">
+<h2>Blog</h2>
+
+<div class="card">
+What Happens When GPT-4 Reads Nigerian Pidgin
+</div>
+
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+
+<div class="card">
+Email: your@email.com
+</div>
+
+</section>
+
+<footer>
+Built by Joy Olusanya · GitHub Pages
+</footer>
+
+<script>
+const languages = [
+"Yorùbá","Hausa","Igbo","Pidgin",
+"Swahili","Amharic","Zulu",
+"Fulfulde","Wolof","Twi",
+"NLP","ASR","MT","LLMs"
+];
+
+const container = document.getElementById("langBg");
+
+for(let i=0;i<40;i++){
+  let el=document.createElement("span");
+  el.className="lang";
+  el.innerText=languages[Math.floor(Math.random()*languages.length)];
+
+  el.style.left=Math.random()*100+"vw";
+  el.style.animationDuration=(10+Math.random()*20)+"s";
+  el.style.fontSize=(12+Math.random()*18)+"px";
+
+  container.appendChild(el);
+}
+</script>
+
+</body>
+</html>
