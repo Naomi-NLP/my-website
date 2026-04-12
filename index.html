@@ -1,290 +1,504 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Joy Olusanya | NLP Researcher</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+  <title>Joy Olusanya · NLP Researcher & Linguist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #0b0f19;
-      color: #e6e6e6;
-      overflow-x: hidden;
+    :root {
+      --bg:        #0D0F0E;
+      --surface:   #141716;
+      --surface2:  #1B1F1D;
+      --border:    #2A2E2C;
+      --border2:   #363B38;
+      --text:      #E8EAE9;
+      --muted:     #8A9490;
+      --faint:     #4A5250;
+      --green:     #4ADE80;
+      --green-dim: #1A3328;
+      --green-mid: #22C55E;
+      --gold-dim:  #2D2210;
     }
-
-    canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
-
-    header {
-      padding: 80px 20px;
-      text-align: center;
-      background: rgba(31, 41, 55, 0.6);
-      backdrop-filter: blur(10px);
-    }
-
-    header h1 { font-size: 42px; margin-bottom: 10px; }
-    header p { font-size: 18px; color: #a5b4fc; }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); font-size:15px; line-height:1.75; }
+    a { text-decoration:none; color:inherit; }
+    ::-webkit-scrollbar { width:4px; }
+    ::-webkit-scrollbar-track { background:var(--bg); }
+    ::-webkit-scrollbar-thumb { background:var(--border2); border-radius:2px; }
 
     nav {
-      text-align: center;
-      padding: 15px;
-      background: rgba(17, 24, 39, 0.8);
-      position: sticky;
-      top: 0;
-      backdrop-filter: blur(10px);
+      position:fixed; top:0; left:0; right:0; z-index:999;
+      height:60px; background:rgba(13,15,14,0.88);
+      backdrop-filter:blur(14px); border-bottom:1px solid var(--border);
+      display:flex; align-items:center; justify-content:space-between; padding:0 2.5rem;
     }
+    .nav-logo { font-family:'Playfair Display',serif; font-size:18px; font-weight:700; display:flex; align-items:center; gap:10px; }
+    .nav-dot { width:8px; height:8px; border-radius:50%; background:var(--green); animation:pulse 2s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.8)} }
+    .nav-links { display:flex; align-items:center; gap:2rem; }
+    .nav-links a { font-size:12px; font-weight:500; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); transition:color .2s; }
+    .nav-links a:hover { color:var(--green); }
 
-    nav a {
-      margin: 0 15px;
-      color: #e5e7eb;
-      text-decoration: none;
-      font-weight: 500;
-    }
+    .hero { min-height:100vh; display:flex; align-items:center; padding:8rem 2.5rem 5rem; border-bottom:1px solid var(--border); position:relative; overflow:hidden; }
+    .hero-bg { position:absolute; inset:0; z-index:0; background: radial-gradient(ellipse 60% 50% at 70% 50%,rgba(74,222,128,.05) 0%,transparent 70%), radial-gradient(ellipse 40% 60% at 10% 80%,rgba(74,222,128,.03) 0%,transparent 60%); }
+    .hero-grid { max-width:960px; margin:0 auto; width:100%; display:grid; grid-template-columns:1fr 280px; gap:4rem; align-items:center; position:relative; z-index:1; animation:fadeUp .7s ease both; }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+    .hero-badge { display:inline-flex; align-items:center; gap:8px; font-size:11px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--green); margin-bottom:1.5rem; border:1px solid rgba(74,222,128,.25); background:rgba(74,222,128,.05); padding:5px 14px; border-radius:20px; }
+    .hero h1 { font-family:'Playfair Display',serif; font-size:56px; line-height:1.08; font-weight:700; margin-bottom:.5rem; }
+    .hero h1 em { font-style:italic; color:var(--green); }
+    .hero-sub { font-size:14px; color:var(--muted); margin-bottom:1.5rem; letter-spacing:.02em; }
+    .hero-bio { font-size:15px; color:var(--muted); line-height:1.85; margin-bottom:2.5rem; max-width:520px; }
+    .hero-ctas { display:flex; flex-wrap:wrap; gap:.75rem; }
+    .cta-p { display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:600; padding:10px 22px; background:var(--green); color:#0D0F0E; border-radius:4px; transition:background .2s,transform .15s; }
+    .cta-p:hover { background:var(--green-mid); transform:translateY(-1px); }
+    .cta-o { display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:500; padding:10px 22px; background:transparent; color:var(--text); border:1px solid var(--border2); border-radius:4px; transition:border-color .2s,color .2s,transform .15s; }
+    .cta-o:hover { border-color:var(--green); color:var(--green); transform:translateY(-1px); }
 
-    section {
-      max-width: 950px;
-      margin: auto;
-      padding: 60px 20px;
-    }
+    .photo-wrap { position:relative; }
+    .photo-frame { width:260px; height:310px; border-radius:6px; border:1px solid var(--border2); background:var(--surface); overflow:hidden; }
+    .photo-frame img { width:100%; height:100%; object-fit:cover; display:block; }
+    .photo-placeholder { width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.75rem; background:linear-gradient(160deg,var(--surface2),var(--green-dim)); }
+    .photo-placeholder .ini { font-family:'Playfair Display',serif; font-size:72px; font-style:italic; color:var(--green); }
+    .photo-placeholder .hint { font-size:11px; color:var(--faint); letter-spacing:.06em; text-transform:uppercase; }
+    .photo-accent { position:absolute; bottom:-10px; right:-10px; width:60px; height:60px; border:2px solid var(--green); border-radius:4px; z-index:-1; }
+    .photo-tag { position:absolute; bottom:14px; left:-16px; background:var(--surface); border:1px solid var(--border2); padding:8px 14px; border-radius:4px; font-size:11px; font-weight:600; white-space:nowrap; }
+    .photo-tag span { color:var(--green); }
 
-    h2 {
-      color: #93c5fd;
-      margin-bottom: 15px;
-    }
+    .page { max-width:960px; margin:0 auto; padding:0 2.5rem; }
+    section { padding:5rem 0; border-bottom:1px solid var(--border); }
+    section:last-child { border-bottom:none; }
+    .sh { margin-bottom:2.5rem; }
+    .sl { font-size:11px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--green); margin-bottom:.5rem; display:block; }
+    .st { font-family:'Playfair Display',serif; font-size:30px; font-weight:700; color:var(--text); }
 
-    .card {
-      background: rgba(17, 24, 39, 0.85);
-      padding: 20px;
-      border-radius: 12px;
-      margin-bottom: 15px;
-      backdrop-filter: blur(10px);
-    }
+    .tags { display:flex; flex-wrap:wrap; gap:.5rem; }
+    .tag { font-size:12px; font-weight:500; padding:5px 13px; border-radius:20px; border:1px solid; }
+    .tg { color:var(--green); border-color:rgba(74,222,128,.3); background:rgba(74,222,128,.06); }
+    .tp { color:var(--muted); border-color:var(--border2); }
 
-    .tag {
-      display: inline-block;
-      padding: 4px 10px;
-      background: #1f2937;
-      border-radius: 20px;
-      font-size: 12px;
-      margin: 4px;
-      color: #93c5fd;
-    }
+    .paper { background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--green); padding:1.5rem 1.75rem; margin-bottom:1rem; border-radius:0 6px 6px 0; transition:background .2s; }
+    .paper:hover { background:var(--surface2); }
+    .pv { font-size:11px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--green); margin-bottom:.4rem; }
+    .pt { font-family:'Playfair Display',serif; font-size:17px; line-height:1.4; color:var(--text); margin-bottom:.75rem; }
+    .chip { font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; padding:4px 12px; border-radius:3px; border:1px solid var(--border2); color:var(--muted); transition:all .15s; display:inline-block; }
+    .chip:hover { border-color:var(--green); color:var(--green); }
 
-    a.button {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background: #3b82f6;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-    }
+    .pg { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    .pc { background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:1.5rem; display:flex; flex-direction:column; transition:border-color .2s,transform .2s; }
+    .pc:hover { border-color:var(--border2); transform:translateY(-2px); }
+    .ptop { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1rem; }
+    .pflag { font-size:28px; }
+    .pli { font-size:14px; color:var(--faint); transition:color .15s; }
+    .pc:hover .pli { color:var(--green); }
+    .pname { font-family:'Playfair Display',serif; font-size:16px; font-weight:700; margin-bottom:.5rem; line-height:1.3; color:var(--text); }
+    .pdesc { font-size:13px; color:var(--muted); line-height:1.65; margin-bottom:1rem; flex:1; }
+    .pstack { display:flex; flex-wrap:wrap; gap:.35rem; margin-bottom:1rem; }
+    .sc { font-size:11px; font-weight:600; color:var(--green); background:var(--green-dim); padding:2px 9px; border-radius:3px; }
+    .pm { font-size:12px; color:var(--faint); border-top:1px solid var(--border); padding-top:.75rem; }
+    .pm b { color:var(--text); }
 
-    .blog-title {
-      font-weight: 600;
-      margin-bottom: 5px;
-    }
+    .timeline { position:relative; }
+    .timeline::before { content:''; position:absolute; left:0; top:6px; bottom:0; width:1px; background:var(--border); }
+    .tli { padding:0 0 2.5rem 2.5rem; position:relative; }
+    .tli:last-child { padding-bottom:0; }
+    .tld { position:absolute; left:-5px; top:6px; width:11px; height:11px; border-radius:50%; background:var(--bg); border:2px solid var(--green); }
+    .tldate { font-size:12px; color:var(--muted); font-weight:500; margin-bottom:.25rem; }
+    .tlrole { font-size:15px; font-weight:600; color:var(--text); }
+    .tlorg  { font-size:13px; color:var(--green); font-weight:500; margin-bottom:.6rem; }
+    .tlb { list-style:none; }
+    .tlb li { font-size:13px; color:var(--muted); padding:.2rem 0 .2rem 1rem; position:relative; }
+    .tlb li::before { content:'→'; position:absolute; left:0; color:var(--faint); font-size:11px; }
 
-    .meta {
-      font-size: 12px;
-      color: #9ca3af;
-      margin-bottom: 10px;
-    }
+    .tg3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem; }
+    .tc { background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:1.5rem; transition:border-color .2s; }
+    .tc:hover { border-color:var(--border2); }
+    .ticon { font-size:26px; margin-bottom:.75rem; display:block; }
+    .trole { font-size:14px; font-weight:600; color:var(--text); margin-bottom:.2rem; }
+    .torg  { font-size:12px; color:var(--green); font-weight:500; margin-bottom:.4rem; }
+    .tdate { font-size:11px; color:var(--faint); margin-bottom:.75rem; }
+    .tdesc { font-size:13px; color:var(--muted); line-height:1.6; }
 
-    footer {
-      text-align: center;
-      padding: 40px;
-      color: #6b7280;
+    .bg3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem; }
+    .bc { background:var(--surface); border:1px solid var(--border); border-radius:6px; overflow:hidden; display:flex; flex-direction:column; transition:border-color .2s,transform .2s; }
+    .bc:hover { border-color:var(--border2); transform:translateY(-2px); }
+    .bthumb { height:120px; display:flex; align-items:center; justify-content:center; font-size:36px; }
+    .bt1 { background:linear-gradient(135deg,#0D2B1A,#1A3328); }
+    .bt2 { background:linear-gradient(135deg,#1A1208,#2D2210); }
+    .bt3 { background:linear-gradient(135deg,#0A1820,#0C2030); }
+    .bb { padding:1.25rem; flex:1; display:flex; flex-direction:column; }
+    .btag { font-size:10px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--green); margin-bottom:.5rem; }
+    .btitle { font-family:'Playfair Display',serif; font-size:15px; line-height:1.35; color:var(--text); margin-bottom:.5rem; font-weight:600; }
+    .bexc { font-size:12px; color:var(--muted); line-height:1.6; margin-bottom:1rem; flex:1; }
+    .bmeta { font-size:11px; color:var(--faint); }
+
+    .al { display:flex; flex-direction:column; }
+    .ai { display:flex; align-items:flex-start; gap:1.25rem; padding:1.1rem 0; border-bottom:1px solid var(--border); }
+    .ai:last-child { border-bottom:none; }
+    .aicon { width:40px; height:40px; border-radius:50%; flex-shrink:0; background:var(--gold-dim); border:1px solid rgba(245,158,11,.25); display:flex; align-items:center; justify-content:center; font-size:18px; }
+    .aname { font-size:14px; font-weight:600; color:var(--text); margin-bottom:.15rem; }
+    .abody { font-size:13px; color:var(--muted); }
+
+    .cw { display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:start; }
+    .ci { font-size:15px; color:var(--muted); line-height:1.85; margin-bottom:1.5rem; }
+    .cl { display:flex; flex-direction:column; gap:.75rem; }
+    .clink { display:flex; align-items:center; gap:1rem; background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:1rem 1.25rem; transition:border-color .2s; }
+    .clink:hover { border-color:var(--green); }
+    .clicon { font-size:20px; width:36px; text-align:center; flex-shrink:0; }
+    .cltype { font-size:10px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); margin-bottom:.1rem; }
+    .clval  { font-size:13px; font-weight:500; color:var(--text); }
+    .cf { display:flex; flex-direction:column; gap:.75rem; }
+    .fr { display:grid; grid-template-columns:1fr 1fr; gap:.75rem; }
+    .fg { display:flex; flex-direction:column; gap:.35rem; }
+    .fg label { font-size:11px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); }
+    .fg input, .fg textarea { background:var(--surface); border:1px solid var(--border); border-radius:4px; padding:10px 14px; font-size:14px; font-family:'Inter',sans-serif; color:var(--text); outline:none; resize:vertical; transition:border-color .2s; }
+    .fg input:focus, .fg textarea:focus { border-color:var(--green); }
+    .fg textarea { min-height:110px; }
+    .bsend { align-self:flex-start; background:var(--green); color:#0D0F0E; font-size:13px; font-weight:600; padding:10px 24px; border-radius:4px; border:none; cursor:pointer; transition:background .2s; }
+    .bsend:hover { background:var(--green-mid); }
+
+    footer { background:var(--surface); border-top:1px solid var(--border); padding:2rem 2.5rem; display:flex; align-items:center; justify-content:space-between; }
+    .fl { font-size:13px; color:var(--faint); }
+    .fl span { color:var(--green); }
+    .fr2 { font-size:12px; color:var(--faint); }
+
+    @media(max-width:700px){
+      .hero-grid,.pg,.tg3,.bg3,.cw,.fr { grid-template-columns:1fr; }
+      .photo-wrap { display:none; }
+      .hero h1 { font-size:38px; }
+      .nav-links { gap:1rem; }
+      footer { flex-direction:column; gap:.5rem; text-align:center; }
     }
   </style>
 </head>
-
 <body>
 
-<canvas id="bg"></canvas>
-
-<header>
-  <h1>Joy Olusanya</h1>
-  <p>NLP Researcher • African Languages • LLM Evaluation</p>
-  <a class="button" href="#contact">Contact Me</a>
-</header>
-
 <nav>
-  <a href="#about">About</a>
-  <a href="#research">Research</a>
-  <a href="#experience">Experience</a>
-  <a href="#publications">Publications</a>
-  <a href="#blog">Blog</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
+  <div class="nav-logo"><div class="nav-dot"></div>Joy Olusanya</div>
+  <div class="nav-links">
+    <a href="#research">Research</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
-<!-- ABOUT -->
-<section id="about">
-  <h2>About</h2>
-  <div class="card">
-    NLP researcher focused on low-resource African languages, dataset creation,
-    and evaluation of large language models.
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid">
+    <div>
+      <div class="hero-badge">🇳🇬 Lagos, Nigeria · Open to Collaboration</div>
+      <h1>Joy <em>Olusanya</em></h1>
+      <p class="hero-sub">NLP Researcher &amp; Linguist · African Languages · LLM Evaluation</p>
+      <p class="hero-bio">Linguistics graduate with 4 years of experience building datasets, evaluation pipelines, and multilingual NLP systems. I focus on low-resource African languages — from Yorùbá ASR to Nigerian Pidgin sentiment — and care deeply about language preservation and digital inclusion.</p>
+      <div class="hero-ctas">
+        <a href="mailto:joynaomiolusanya@gmail.com" class="cta-p">✉ Get in Touch</a>
+        <a href="https://github.com/YOUR_USERNAME" target="_blank" class="cta-o">GitHub</a>
+        <a href="https://linkedin.com/in/YOUR_PROFILE" target="_blank" class="cta-o">LinkedIn</a>
+        <a href="JOY_OLUSANYA_Resume.pdf" target="_blank" class="cta-o">CV / Resume ↗</a>
+      </div>
+    </div>
+    <div class="photo-wrap">
+      <!--
+        HOW TO ADD YOUR PHOTO:
+        1. Save your picture as "photo.jpg" in the same folder as index.html
+        2. Delete the .photo-placeholder div below
+        3. Uncomment this line:
+        <img src="photo.jpg" alt="Joy Olusanya" style="width:100%;height:100%;object-fit:cover;"/>
+      -->
+      <div class="photo-frame">
+        <div class="photo-placeholder">
+          <span class="ini">J</span>
+          <span class="hint">Replace with photo.jpg</span>
+        </div>
+      </div>
+      <div class="photo-accent"></div>
+      <div class="photo-tag">🏆 NeurIPS <span>2025</span> Scholar</div>
+    </div>
   </div>
-</section>
+</div>
 
-<!-- RESEARCH -->
-<section id="research">
-  <h2>Research Interests</h2>
-  <div class="card">
-    <span class="tag">Yorùbá NLP</span>
-    <span class="tag">Igbo NLP</span>
-    <span class="tag">Hausa</span>
-    <span class="tag">Nigerian Pidgin</span>
-    <span class="tag">LLM Evaluation</span>
-    <span class="tag">Speech Recognition</span>
-    <span class="tag">Dataset Curation</span>
-  </div>
-</section>
+<div class="page">
 
-<!-- EXPERIENCE / TEACHING -->
-<section id="experience">
-  <h2>Teaching & Experience</h2>
+  <!-- INTERESTS -->
+  <section id="interests">
+    <div class="sh"><span class="sl">What I Work On</span><div class="st">Research Interests</div></div>
+    <div class="tags">
+      <span class="tag tg">Low-Resource NLP</span>
+      <span class="tag tg">African Languages</span>
+      <span class="tag tg">LLM Evaluation</span>
+      <span class="tag tg">Sentiment Analysis</span>
+      <span class="tag tg">Nigerian Pidgin</span>
+      <span class="tag tg">Yorùbá NLP</span>
+      <span class="tag tp">Automatic Speech Recognition</span>
+      <span class="tag tp">Machine Translation</span>
+      <span class="tag tp">Benchmark Design</span>
+      <span class="tag tp">Dataset Curation</span>
+      <span class="tag tp">AI Safety &amp; Governance</span>
+      <span class="tag tp">Endangered Languages</span>
+    </div>
+  </section>
 
-  <div class="card">
-    <strong>Research Assistant — NLP Lab</strong><br/>
-    Worked on dataset creation and evaluation pipelines for multilingual NLP systems.
-  </div>
+  <!-- PUBLICATIONS -->
+  <section id="research">
+    <div class="sh"><span class="sl">Publications</span><div class="st">Research Papers</div></div>
+    <div class="paper">
+      <div class="pv">LoResLM Workshop @ EACL 2026</div>
+      <div class="pt">Tone in Yoruba Automatic Speech Recognition: Evaluating the Impact of Tone Recognition on Transformer-Based ASR Models</div>
+      <a href="#" class="chip">Paper ↗</a>
+    </div>
+    <div class="paper">
+      <div class="pv">WiML @ NeurIPS 2025</div>
+      <div class="pt">ÒWE-YOR: Leveraging Transformer-Based Models for Yoruba Proverb Classification</div>
+      <a href="#" class="chip">Paper ↗</a>
+    </div>
+  </section>
 
-  <div class="card">
-    <strong>Teaching Assistant — Linguistics Department</strong><br/>
-    Assisted in courses on phonetics, syntax, and computational linguistics.
-  </div>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="sh"><span class="sl">Selected Work</span><div class="st">Projects</div></div>
+    <div class="pg">
 
-  <div class="card">
-    <strong>Workshop Facilitator</strong><br/>
-    Led sessions on introduction to NLP and African language technology.
-  </div>
-</section>
+      <div class="pc">
+        <div class="ptop"><span class="pflag">🇳🇬</span><a href="https://github.com/YOUR_USERNAME/naija-pidgin-llm-eval" target="_blank"><span class="pli">↗</span></a></div>
+        <div class="pname">Evaluating LLM Performance on Nigerian Pidgin Sentiment</div>
+        <p class="pdesc">Zero-shot sentiment benchmark on Nigerian Pidgin using GPT-4o-mini on the NaijaSenti corpus (MTEB/MMTEB). Stratified 2,000-example sample with a full evaluation pipeline.</p>
+        <div class="pstack"><span class="sc">Python</span><span class="sc">GPT-4o-mini</span><span class="sc">HuggingFace</span><span class="sc">Zero-Shot</span></div>
+        <div class="pm">Accuracy <b>63.20%</b> · Macro F1 <b>54.92%</b> · Weighted F1 <b>69.10%</b></div>
+      </div>
 
-<!-- PUBLICATIONS -->
-<section id="publications">
-  <h2>Publications</h2>
+      <div class="pc">
+        <div class="ptop"><span class="pflag">📖</span><a href="#" target="_blank"><span class="pli">↗</span></a></div>
+        <div class="pname">Yorùbá Proverb Classification</div>
+        <p class="pdesc">Culturally grounded semantic classification in a low-resource setting. Compared Naive Bayes with BERT and AfroLM on morpho-semantic patterns in culturally embedded texts.</p>
+        <div class="pstack"><span class="sc">AfroLM</span><span class="sc">BERT</span><span class="sc">Transformers</span><span class="sc">Python</span></div>
+        <div class="pm">Precision · Recall · F1 · Structured error analysis</div>
+      </div>
 
-  <div class="card">
-    <strong>IDIOMEVAL Framework</strong><br/>
-    Evaluating idiom translation in multilingual LLM systems using BLEU, BLEURT, and human judgment alignment.
-  </div>
+      <div class="pc">
+        <div class="ptop"><span class="pflag">🌍</span><a href="#" target="_blank"><span class="pli">↗</span></a></div>
+        <div class="pname">Multilingual Translation Evaluation: mBART50</div>
+        <p class="pdesc">Evaluated pretrained mBART50 for English–French translation using BLEU and ROUGE. Qualitative error analysis on syntactic divergence and lexical ambiguity.</p>
+        <div class="pstack"><span class="sc">mBART50</span><span class="sc">BLEU</span><span class="sc">ROUGE</span></div>
+        <div class="pm">Error typology · Structural complexity analysis</div>
+      </div>
 
-  <div class="card">
-    <strong>Low-Resource Yoruba ASR Benchmark</strong><br/>
-    Speech recognition system for tonal African languages.
-  </div>
-</section>
+      <div class="pc">
+        <div class="ptop"><span class="pflag">✍️</span><a href="#" target="_blank"><span class="pli">↗</span></a></div>
+        <div class="pname">Automated Essay Scoring with DistilBERT</div>
+        <p class="pdesc">Fine-tuned DistilBERT for regression-based essay scoring. Evaluated human–model alignment and benchmarked against classical ML approaches.</p>
+        <div class="pstack"><span class="sc">DistilBERT</span><span class="sc">PyTorch</span><span class="sc">Regression</span></div>
+        <div class="pm">Human alignment evaluation · Baseline comparison</div>
+      </div>
 
-<!-- BLOG -->
-<section id="blog">
-  <h2>Blog / Research Notes</h2>
+    </div>
+  </section>
 
-  <div class="card">
-    <div class="blog-title">Why African Languages Matter in NLP</div>
-    <div class="meta">April 2026 • NLP + Language Preservation</div>
-    The future of NLP must include low-resource languages. In this post, I discuss challenges in dataset scarcity and evaluation bias.
-  </div>
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="sh"><span class="sl">Where I've Worked</span><div class="st">Experience</div></div>
+    <div class="timeline">
 
-  <div class="card">
-    <div class="blog-title">Evaluating LLMs Beyond BLEU</div>
-    <div class="meta">March 2026 • LLM Evaluation</div>
-    Traditional metrics fail for idioms and cultural context. We need human-aligned evaluation frameworks.
-  </div>
+      <div class="tli"><div class="tld"></div>
+        <div class="tldate">Aug 2025 – Present</div>
+        <div class="tlrole">NLP Researcher &amp; Yoruba Language Lead</div>
+        <div class="tlorg">Tonative · Lagos, Nigeria</div>
+        <ul class="tlb">
+          <li>Developed multilingual NLP datasets for low-resource African languages.</li>
+          <li>Translated English into Kikuyu, Kinyarwanda, and Yoruba for research publications.</li>
+          <li>Benchmarked OpenAI healthcare datasets to evaluate model performance and data quality.</li>
+        </ul>
+      </div>
 
-  <div class="card">
-    <div class="blog-title">Building Yoruba NLP Datasets</div>
-    <div class="meta">February 2026 • Dataset Engineering</div>
-    A look into the challenges of tonal annotation and transcription standardisation.
-  </div>
-</section>
+      <div class="tli"><div class="tld"></div>
+        <div class="tldate">Aug 2025 – Present</div>
+        <div class="tlrole">NLP / ML Engineer Lead</div>
+        <div class="tlorg">YorLect · Remote</div>
+        <ul class="tlb">
+          <li>Led research to improve NLP model performance for Yoruba and its dialects.</li>
+          <li>Developed evaluation benchmarks and language resources for low-resource NLP.</li>
+          <li>Supervised model training, evaluation, and deployment pipelines.</li>
+        </ul>
+      </div>
 
-<!-- PROJECTS -->
-<section id="projects">
-  <h2>Projects</h2>
+      <div class="tli"><div class="tld"></div>
+        <div class="tldate">Sep 2025</div>
+        <div class="tlrole">Workshop Chair — CLRLC-LLMs Workshop</div>
+        <div class="tlorg">NeurIPS 2025 · Mexico City</div>
+        <ul class="tlb">
+          <li>Planned and coordinated an international research workshop on cross-lingual LLMs.</li>
+          <li>Managed program committee, speaker invitations, and community partnerships.</li>
+        </ul>
+      </div>
 
-  <div class="card">
-    African NLP Dataset Hub — Yoruba, Igbo, Hausa datasets.
-  </div>
+      <div class="tli"><div class="tld"></div>
+        <div class="tldate">Jan 2024 – Mar 2025</div>
+        <div class="tlrole">AI Developer</div>
+        <div class="tlorg">Brilla AI Project, Kwame AI Ghana · Remote</div>
+        <ul class="tlb">
+          <li>Developed deep learning ASR models for multilingual speech with accent robustness.</li>
+          <li>Built reproducible evaluation workflows aligned with training pipelines.</li>
+        </ul>
+      </div>
 
-  <div class="card">
-    LLM Evaluation Pipeline — COMET, BLEURT, human alignment scoring.
-  </div>
-</section>
+      <div class="tli"><div class="tld"></div>
+        <div class="tldate">Jun 2024 – Dec 2024</div>
+        <div class="tlrole">ML / NLP Engineer</div>
+        <div class="tlorg">Rendo AI Nigeria · Lagos</div>
+        <ul class="tlb">
+          <li>Designed Python-based web scraping pipelines for large-scale data acquisition.</li>
+          <li>Developed reusable tools to handle structured data from diverse sources.</li>
+        </ul>
+      </div>
 
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="card">
-    Email: yourname@email.com<br/>
-    GitHub: github.com/yourusername<br/>
-    LinkedIn: linkedin.com/in/yourprofile
-  </div>
-</section>
+    </div>
+  </section>
+
+  <!-- TEACHING -->
+  <section id="teaching">
+    <div class="sh"><span class="sl">Education &amp; Mentorship</span><div class="st">Teaching Experience</div></div>
+    <div class="tg3">
+
+      <div class="tc">
+        <span class="ticon">🏫</span>
+        <div class="trole">Training Manager</div>
+        <div class="torg">Tonative · Lagos</div>
+        <div class="tdate">Jan 2026 – Present</div>
+        <p class="tdesc">Designed curricula across diverse linguistic contexts. Led tutor recruitment and onboarding. Coordinated performance feedback and quality assurance for training programmes.</p>
+      </div>
+
+      <div class="tc">
+        <span class="ticon">🤖</span>
+        <div class="trole">AI Mentor</div>
+        <div class="torg">LevelUp Techies Bootcamp · Remote</div>
+        <div class="tdate">Sep 2024 – Nov 2024</div>
+        <p class="tdesc">Guided 50+ participants in Python and ML fundamentals, improving technical readiness and confidence among early-career learners.</p>
+      </div>
+
+      <div class="tc">
+        <span class="ticon">🧠</span>
+        <div class="trole">Deep Learning / AI Co-Lead</div>
+        <div class="torg">Data Science Nigeria · Remote</div>
+        <div class="tdate">Jan 2025 – Nov 2025</div>
+        <p class="tdesc">Facilitated hands-on deep learning sessions for 20+ participants. Organised national hackathons and mentored emerging AI professionals.</p>
+      </div>
+
+      <div class="tc">
+        <span class="ticon">👩🏾‍💻</span>
+        <div class="trole">AI / ML Lead</div>
+        <div class="torg">Women in Data Science Nigeria (WiDS)</div>
+        <div class="tdate">Oct 2024 – Nov 2025</div>
+        <p class="tdesc">Organised AI/ML workshops for women across skill levels. Developed structured learning paths and moderated panels on mentorship and inclusivity.</p>
+      </div>
+
+      <div class="tc">
+        <span class="ticon">📋</span>
+        <div class="trole">Reviewer</div>
+        <div class="torg">Deep Learning Indaba Ideathon 2025</div>
+        <div class="tdate">Aug 2025</div>
+        <p class="tdesc">Reviewed AI/ML submissions, ensuring fairness and quality. Promoted knowledge sharing and collaboration in African AI research communities.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog">
+    <div class="sh"><span class="sl">Writing</span><div class="st">Blog</div></div>
+    <div class="bg3">
+
+      <a href="#" class="bc">
+        <div class="bthumb bt1">🇳🇬</div>
+        <div class="bb">
+          <div class="btag">NLP · African Languages</div>
+          <div class="btitle">What Happens When GPT-4 Reads Nigerian Pidgin</div>
+          <p class="bexc">Breaking down my zero-shot sentiment evaluation results and what the failures reveal about LLM multilingual transfer.</p>
+          <div class="bmeta">Coming soon</div>
+        </div>
+      </a>
+
+      <a href="#" class="bc">
+        <div class="bthumb bt2">📖</div>
+        <div class="bb">
+          <div class="btag">Linguistics · Research</div>
+          <div class="btitle">Why Yorùbá Proverbs Are Hard for Transformers</div>
+          <p class="bexc">How culturally embedded meaning, metaphor, and tonal ambiguity challenge even modern language models.</p>
+          <div class="bmeta">Coming soon</div>
+        </div>
+      </a>
+
+      <a href="#" class="bc">
+        <div class="bthumb bt3">🎙️</div>
+        <div class="bb">
+          <div class="btag">ASR · Speech</div>
+          <div class="btitle">Tone is Everything: ASR in Tonal Languages</div>
+          <p class="bexc">A beginner-friendly look at why tonal languages like Yorùbá break most off-the-shelf speech recognition systems.</p>
+          <div class="bmeta">Coming soon</div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- AWARDS -->
+  <section id="awards">
+    <div class="sh"><span class="sl">Recognition</span><div class="st">Awards &amp; Grants</div></div>
+    <div class="al">
+      <div class="ai"><div class="aicon">🏆</div><div><div class="aname">NeurIPS 2025 Scholar Award</div><div class="abody">Neural Information Processing Systems · Mexico City, 2025</div></div></div>
+      <div class="ai"><div class="aicon">✈️</div><div><div class="aname">WiML @ NeurIPS 2025 Travel Funding Award</div><div class="abody">Women in Machine Learning Workshop · Mexico City, 2025</div></div></div>
+      <div class="ai"><div class="aicon">🌍</div><div><div class="aname">Deep Learning Indaba 2025 Travel Grant</div><div class="abody">Deep Learning Indaba Conference · Kigali, Rwanda, 2025</div></div></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="sh"><span class="sl">Let's Talk</span><div class="st">Contact</div></div>
+    <div class="cw">
+      <div>
+        <p class="ci">I am always open to research collaborations, dataset partnerships, and conversations about African language technology. Feel free to reach out.</p>
+        <div class="cl">
+          <a href="mailto:joynaomiolusanya@gmail.com" class="clink">
+            <span class="clicon">✉️</span>
+            <div><div class="cltype">Email</div><div class="clval">joynaomiolusanya@gmail.com</div></div>
+          </a>
+          <a href="https://github.com/YOUR_USERNAME" target="_blank" class="clink">
+            <span class="clicon">💻</span>
+            <div><div class="cltype">GitHub</div><div class="clval">github.com/YOUR_USERNAME</div></div>
+          </a>
+          <a href="https://linkedin.com/in/YOUR_PROFILE" target="_blank" class="clink">
+            <span class="clicon">🔗</span>
+            <div><div class="cltype">LinkedIn</div><div class="clval">linkedin.com/in/YOUR_PROFILE</div></div>
+          </a>
+        </div>
+      </div>
+      <form class="cf" onsubmit="handleForm(event)">
+        <div class="fr">
+          <div class="fg"><label>Name</label><input type="text" placeholder="Your name" required/></div>
+          <div class="fg"><label>Email</label><input type="email" placeholder="your@email.com" required/></div>
+        </div>
+        <div class="fg"><label>Subject</label><input type="text" placeholder="Collaboration / Research / Other"/></div>
+        <div class="fg"><label>Message</label><textarea placeholder="Tell me about your project or idea..."></textarea></div>
+        <button type="submit" class="bsend">Send Message →</button>
+      </form>
+    </div>
+  </section>
+
+</div>
 
 <footer>
-  © 2026 Joy Olusanya • Built with GitHub Pages
+  <div class="fl">Built with HTML &amp; CSS · <span>Joy Olusanya</span> · Lagos 🇳🇬</div>
+  <div class="fr2">Hosted on GitHub Pages · 2025</div>
 </footer>
 
-<!-- 🌍 Floating Language Animation -->
 <script>
-const canvas = document.getElementById("bg");
-const ctx = canvas.getContext("2d");
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-const words = [
-  "Yorùbá", "Igbo", "Hausa", "Pidgin",
-  "Ẹ káàbọ̀", "Sannu", "Ndewo", "Bawo ni",
-  "Ẹ se", "Nagode", "Abeg", "O di egwu"
-];
-
-const particles = [];
-
-for (let i = 0; i < 45; i++) {
-  particles.push({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
-    speed: 0.4 + Math.random() * 1.2,
-    word: words[Math.floor(Math.random() * words.length)]
-  });
-}
-
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = "rgba(255,255,255,0.08)";
-  ctx.font = "16px Inter";
-
-  particles.forEach(p => {
-    ctx.fillText(p.word, p.x, p.y);
-    p.y -= p.speed;
-
-    if (p.y < -20) {
-      p.y = canvas.height + 20;
-      p.x = Math.random() * canvas.width;
-      p.word = words[Math.floor(Math.random() * words.length)];
-    }
-  });
-
-  requestAnimationFrame(animate);
-}
-
-animate();
-
-window.addEventListener("resize", () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-});
+  function handleForm(e) {
+    e.preventDefault();
+    alert('To make this form work, sign up at formspree.io and replace the form action with your Formspree endpoint.');
+  }
 </script>
 
 </body>
