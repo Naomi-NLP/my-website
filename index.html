@@ -1,279 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Joy Olusanya · NLP Researcher & Linguist</title>
+  <title>Joy Olusanya | NLP Researcher</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg:#0D0F0E;
-      --surface:#141716;
-      --border:#2A2E2C;
-      --text:#E8EAE9;
-      --muted:#8A9490;
-      --green:#4ADE80;
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0b0f19;
+      color: #e6e6e6;
+      overflow-x: hidden;
     }
 
-    body{
-      margin:0;
-      font-family:'Inter',sans-serif;
-      background:var(--bg);
-      color:var(--text);
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
     }
 
-    nav{
-      position:fixed;
-      top:0;
-      width:100%;
-      height:60px;
-      background:rgba(13,15,14,0.9);
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:0 2rem;
-      border-bottom:1px solid var(--border);
-      z-index:1000;
+    header {
+      padding: 80px 20px;
+      text-align: center;
+      background: rgba(31, 41, 55, 0.6);
+      backdrop-filter: blur(10px);
     }
 
-    nav a{
-      color:var(--muted);
-      text-decoration:none;
-      margin-left:1rem;
-      font-size:12px;
-      text-transform:uppercase;
+    header h1 { font-size: 42px; margin-bottom: 10px; }
+    header p { font-size: 18px; color: #a5b4fc; }
+
+    nav {
+      text-align: center;
+      padding: 15px;
+      background: rgba(17, 24, 39, 0.8);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
     }
 
-    nav a:hover{color:var(--green);}
-
-    .hero{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      position:relative;
-      overflow:hidden;
+    nav a {
+      margin: 0 15px;
+      color: #e5e7eb;
+      text-decoration: none;
+      font-weight: 500;
     }
 
-    /* LANGUAGE BACKGROUND */
-    .lang-bg{
-      position:absolute;
-      inset:0;
-      overflow:hidden;
-      z-index:0;
+    section {
+      max-width: 950px;
+      margin: auto;
+      padding: 60px 20px;
     }
 
-    .lang{
-      position:absolute;
-      color:rgba(74,222,128,0.12);
-      animation:floatLang linear infinite;
-      white-space:nowrap;
+    h2 {
+      color: #93c5fd;
+      margin-bottom: 15px;
     }
 
-    @keyframes floatLang{
-      0%{transform:translateY(100vh); opacity:0;}
-      10%{opacity:1;}
-      90%{opacity:1;}
-      100%{transform:translateY(-20vh); opacity:0;}
+    .card {
+      background: rgba(17, 24, 39, 0.85);
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      backdrop-filter: blur(10px);
     }
 
-    .hero-content{
-      position:relative;
-      z-index:1;
-      max-width:700px;
-      padding:2rem;
+    .tag {
+      display: inline-block;
+      padding: 4px 10px;
+      background: #1f2937;
+      border-radius: 20px;
+      font-size: 12px;
+      margin: 4px;
+      color: #93c5fd;
     }
 
-    h1{
-      font-family:'Playfair Display',serif;
-      font-size:56px;
-      margin:0;
+    a.button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #3b82f6;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
     }
 
-    h1 span{color:var(--green);}
-
-    .hero p{
-      color:var(--muted);
-      margin:1rem 0;
+    .blog-title {
+      font-weight: 600;
+      margin-bottom: 5px;
     }
 
-    .btn{
-      display:inline-block;
-      margin:0.5rem;
-      padding:10px 20px;
-      border:1px solid var(--border);
-      border-radius:4px;
-      font-size:13px;
+    .meta {
+      font-size: 12px;
+      color: #9ca3af;
+      margin-bottom: 10px;
     }
 
-    .btn.primary{
-      background:var(--green);
-      color:#000;
-      border:none;
-    }
-
-    section{
-      padding:5rem 2rem;
-      max-width:900px;
-      margin:auto;
-    }
-
-    h2{
-      font-family:'Playfair Display',serif;
-      margin-bottom:1rem;
-    }
-
-    .card{
-      background:var(--surface);
-      border:1px solid var(--border);
-      padding:1.2rem;
-      margin-bottom:1rem;
-      border-radius:6px;
-    }
-
-    footer{
-      text-align:center;
-      padding:2rem;
-      border-top:1px solid var(--border);
-      color:var(--muted);
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: #6b7280;
     }
   </style>
 </head>
 
 <body>
 
+<canvas id="bg"></canvas>
+
+<header>
+  <h1>Joy Olusanya</h1>
+  <p>NLP Researcher • African Languages • LLM Evaluation</p>
+  <a class="button" href="#contact">Contact Me</a>
+</header>
+
 <nav>
-  <div>Joy Olusanya</div>
-  <div>
-    <a href="#research">Research</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#teaching">Teaching</a>
-    <a href="#blog">Blog</a>
-    <a href="#contact">Contact</a>
-  </div>
+  <a href="#about">About</a>
+  <a href="#research">Research</a>
+  <a href="#experience">Experience</a>
+  <a href="#publications">Publications</a>
+  <a href="#blog">Blog</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
 </nav>
 
-<div class="hero">
+<!-- ABOUT -->
+<section id="about">
+  <h2>About</h2>
+  <div class="card">
+    NLP researcher focused on low-resource African languages, dataset creation,
+    and evaluation of large language models.
+  </div>
+</section>
 
-  <!-- BACKGROUND -->
-  <div class="lang-bg" id="langBg"></div>
+<!-- RESEARCH -->
+<section id="research">
+  <h2>Research Interests</h2>
+  <div class="card">
+    <span class="tag">Yorùbá NLP</span>
+    <span class="tag">Igbo NLP</span>
+    <span class="tag">Hausa</span>
+    <span class="tag">Nigerian Pidgin</span>
+    <span class="tag">LLM Evaluation</span>
+    <span class="tag">Speech Recognition</span>
+    <span class="tag">Dataset Curation</span>
+  </div>
+</section>
 
-  <div class="hero-content">
-    <h1>Joy <span>Olusanya</span></h1>
-    <p>NLP Researcher · African Languages · LLM Evaluation</p>
-    <p>
-      Linguistics graduate building datasets, evaluation pipelines, and multilingual NLP systems for low-resource African languages.
-    </p>
+<!-- EXPERIENCE / TEACHING -->
+<section id="experience">
+  <h2>Teaching & Experience</h2>
 
-    <a href="mailto:your@email.com" class="btn primary">Contact</a>
-    <a href="https://github.com/YOUR_USERNAME" class="btn">GitHub</a>
+  <div class="card">
+    <strong>Research Assistant — NLP Lab</strong><br/>
+    Worked on dataset creation and evaluation pipelines for multilingual NLP systems.
   </div>
 
-</div>
+  <div class="card">
+    <strong>Teaching Assistant — Linguistics Department</strong><br/>
+    Assisted in courses on phonetics, syntax, and computational linguistics.
+  </div>
 
-<section id="research">
-<h2>Research</h2>
-
-<div class="card">
-<b>Yoruba ASR Research</b><br/>
-Evaluating tone recognition in transformer-based ASR systems.
-</div>
-
-<div class="card">
-<b>Yoruba Proverb Classification</b><br/>
-Transformer-based semantic classification of cultural text.
-</div>
-
+  <div class="card">
+    <strong>Workshop Facilitator</strong><br/>
+    Led sessions on introduction to NLP and African language technology.
+  </div>
 </section>
 
-<section id="projects">
-<h2>Projects</h2>
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <h2>Publications</h2>
 
-<div class="card">
-<b>Nigerian Pidgin Sentiment Analysis</b><br/>
-Zero-shot evaluation using LLMs.
-</div>
+  <div class="card">
+    <strong>IDIOMEVAL Framework</strong><br/>
+    Evaluating idiom translation in multilingual LLM systems using BLEU, BLEURT, and human judgment alignment.
+  </div>
 
-<div class="card">
-<b>mBART Translation Evaluation</b><br/>
-BLEU and ROUGE-based evaluation pipeline.
-</div>
-
+  <div class="card">
+    <strong>Low-Resource Yoruba ASR Benchmark</strong><br/>
+    Speech recognition system for tonal African languages.
+  </div>
 </section>
 
-<section id="experience">
-<h2>Experience</h2>
-
-<div class="card">
-NLP Researcher — Tonative
-</div>
-
-<div class="card">
-ML Engineer — YorLect
-</div>
-
-</section>
-
-<section id="teaching">
-<h2>Teaching</h2>
-
-<div class="card">
-AI Mentor — LevelUp Techies
-</div>
-
-<div class="card">
-Deep Learning Co-Lead — Data Science Nigeria
-</div>
-
-</section>
-
+<!-- BLOG -->
 <section id="blog">
-<h2>Blog</h2>
+  <h2>Blog / Research Notes</h2>
 
-<div class="card">
-What Happens When GPT-4 Reads Nigerian Pidgin
-</div>
+  <div class="card">
+    <div class="blog-title">Why African Languages Matter in NLP</div>
+    <div class="meta">April 2026 • NLP + Language Preservation</div>
+    The future of NLP must include low-resource languages. In this post, I discuss challenges in dataset scarcity and evaluation bias.
+  </div>
 
+  <div class="card">
+    <div class="blog-title">Evaluating LLMs Beyond BLEU</div>
+    <div class="meta">March 2026 • LLM Evaluation</div>
+    Traditional metrics fail for idioms and cultural context. We need human-aligned evaluation frameworks.
+  </div>
+
+  <div class="card">
+    <div class="blog-title">Building Yoruba NLP Datasets</div>
+    <div class="meta">February 2026 • Dataset Engineering</div>
+    A look into the challenges of tonal annotation and transcription standardisation.
+  </div>
 </section>
 
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="card">
+    African NLP Dataset Hub — Yoruba, Igbo, Hausa datasets.
+  </div>
+
+  <div class="card">
+    LLM Evaluation Pipeline — COMET, BLEURT, human alignment scoring.
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
-<h2>Contact</h2>
-
-<div class="card">
-Email: your@email.com
-</div>
-
+  <h2>Contact</h2>
+  <div class="card">
+    Email: yourname@email.com<br/>
+    GitHub: github.com/yourusername<br/>
+    LinkedIn: linkedin.com/in/yourprofile
+  </div>
 </section>
 
 <footer>
-Built by Joy Olusanya · GitHub Pages
+  © 2026 Joy Olusanya • Built with GitHub Pages
 </footer>
 
+<!-- 🌍 Floating Language Animation -->
 <script>
-const languages = [
-"Yorùbá","Hausa","Igbo","Pidgin",
-"Swahili","Amharic","Zulu",
-"Fulfulde","Wolof","Twi",
-"NLP","ASR","MT","LLMs"
+const canvas = document.getElementById("bg");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const words = [
+  "Yorùbá", "Igbo", "Hausa", "Pidgin",
+  "Ẹ káàbọ̀", "Sannu", "Ndewo", "Bawo ni",
+  "Ẹ se", "Nagode", "Abeg", "O di egwu"
 ];
 
-const container = document.getElementById("langBg");
+const particles = [];
 
-for(let i=0;i<40;i++){
-  let el=document.createElement("span");
-  el.className="lang";
-  el.innerText=languages[Math.floor(Math.random()*languages.length)];
-
-  el.style.left=Math.random()*100+"vw";
-  el.style.animationDuration=(10+Math.random()*20)+"s";
-  el.style.fontSize=(12+Math.random()*18)+"px";
-
-  container.appendChild(el);
+for (let i = 0; i < 45; i++) {
+  particles.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    speed: 0.4 + Math.random() * 1.2,
+    word: words[Math.floor(Math.random() * words.length)]
+  });
 }
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "rgba(255,255,255,0.08)";
+  ctx.font = "16px Inter";
+
+  particles.forEach(p => {
+    ctx.fillText(p.word, p.x, p.y);
+    p.y -= p.speed;
+
+    if (p.y < -20) {
+      p.y = canvas.height + 20;
+      p.x = Math.random() * canvas.width;
+      p.word = words[Math.floor(Math.random() * words.length)];
+    }
+  });
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+window.addEventListener("resize", () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
 </script>
 
 </body>
