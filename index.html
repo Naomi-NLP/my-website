@@ -21,6 +21,65 @@
       --green-mid: #22C55E;
       --gold-dim:  #2D2210;
     }
+
+    .hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10%;
+  gap: 40px;
+}
+
+/* LEFT TEXT */
+.hero-text {
+  max-width: 600px;
+}
+
+/* RIGHT PHOTO SECTION */
+.photo-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* CIRCLE IMAGE */
+.profile-img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  /* makes image clearer */
+  border: 4px solid rgba(147, 197, 253, 0.6);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+
+  background: #111;
+}
+
+/* small floating tag */
+.photo-tag {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #93c5fd;
+  background: rgba(17, 24, 39, 0.8);
+  padding: 6px 10px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-img {
+    width: 180px;
+    height: 180px;
+  }
+}
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
     html { scroll-behavior: smooth; }
     body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); font-size:15px; line-height:1.75; }
@@ -202,20 +261,18 @@
         <a href="JOY_OLUSANYA_Resume.pdf" target="_blank" class="cta-o">CV / Resume ↗</a>
       </div>
     </div>
-<div class="photo-wrap">
-  <div class="photo-frame">
-
-    <!-- REAL IMAGE -->
-    <img src="photo.jpg" alt="Joy Olusanya"
-         style="width:100%; height:100%; object-fit:cover; border-radius:12px;"/>
-
+<div class="hero">
+  
+  <div class="hero-text">
+    <h1>Joy Olusanya</h1>
+    <p>NLP Researcher • African Languages • LLM Evaluation</p>
   </div>
 
-  <div class="photo-accent"></div>
-
-  <div class="photo-tag">
-    🏆 NeurIPS <span>2025</span> Scholar
+  <div class="photo-wrap">
+    <img src="photo.jpg" alt="Joy Olusunya" class="profile-img"/>
+    <div class="photo-tag">🏆 Researcher</div>
   </div>
+
 </div>
 
 <div class="page">
