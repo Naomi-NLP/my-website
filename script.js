@@ -105,7 +105,7 @@ const LANG_WORDS = [
       ctx.save();
       ctx.globalAlpha = p.alpha;
       ctx.font = `300 ${p.size}px "Cormorant Garant", serif`;
-      ctx.fillStyle = '#d4a843'; // gold
+      ctx.fillStyle = document.body.classList.contains('light-mode') ? '#1a6fc4' : '#3b9eff';
       ctx.fillText(p.word, p.x, p.y);
       ctx.restore();
 
@@ -283,4 +283,29 @@ const LANG_WORDS = [
   );
 
   sections.forEach(s => observer.observe(s));
+})();
+
+
+// ─── 6. LIGHT / DARK MODE TOGGLE ──────────────────────────────
+
+(function initTheme() {
+  const btn  = document.getElementById('themeToggle');
+  const body = document.body;
+  const KEY  = 'joy-theme';
+
+  // Restore saved preference
+  if (localStorage.getItem(KEY) === 'light') {
+    body.classList.add('light-mode');
+  }
+
+  if (!btn) return;
+
+  btn.addEventListener('click', () => {
+    const isLight = body.classList.toggle('light-mode');
+    localStorage.setItem(KEY, isLight ? 'light' : 'dark');
+
+    // Subtle button spin feedback
+    btn.style.transform = 'scale(0.88) rotate(20deg)';
+    setTimeout(() => { btn.style.transform = ''; }, 220);
+  });
 })();
