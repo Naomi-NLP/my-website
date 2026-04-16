@@ -109,61 +109,9 @@ Passionate about leveraging AI to preserve languages, enhance digital inclusion,
 
 ---
 
-## 🚀 Deploy This Portfolio to GitHub Pages
 
-### Step 1 — Create a GitHub repo
-```
-Name: yourusername.github.io   (for root domain)
-      any-name                  (for /path deployment)
-Visibility: Public
-```
-
-### Step 2 — Upload these files
-```
-index.html
-styles.css
-script.js
-README.md
-```
-
-### Step 3 — Enable Pages
-```
-Settings → Pages → Source: Deploy from branch → main / (root) → Save
-```
-
-### Step 4 — Your site is live at
-```
-https://yourusername.github.io
-```
-
----
-
-## 📁 Project Structure
-
-```
-portfolio/
-├── index.html        ← All sections (Hero, About, Research, Publications, Skills, Contact)
-├── styles.css        ← Full responsive stylesheet with CSS variables & animations
-├── script.js         ← African language particle canvas + scroll animations + navbar
-└── README.md         ← This file
-```
-
----
-
-## ✏️ Personalisation Checklist
-
-- [ ] Replace `linkedin.com/in/joy-olusanya` with your actual LinkedIn URL
-- [ ] Replace `github.com/joyolusanya` with your actual GitHub username
-- [ ] Replace `huggingface.co/joyolusanya` with your HuggingFace profile URL
-- [ ] Update paper links once they are live online
-- [ ] Add a profile photo to `/assets/photo.jpg` and reference it in the About section
-
----
-
-<div align="center">
 
 *"Language is not just a tool for communication — it is the vessel of culture, memory, and identity."*
 
-**Built with pure HTML · CSS · JavaScript — no build tools required**
 
 </div>
