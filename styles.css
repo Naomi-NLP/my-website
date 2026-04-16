@@ -1406,3 +1406,115 @@ body.light-mode .about-photo {
 body.light-mode .about-photo-glow {
   background: radial-gradient(circle, rgba(26, 111, 196, 0.25) 0%, transparent 70%);
 }
+
+/* ─── RESEARCH INTERESTS (PROSE LIST STYLE) ─── */
+.ri-body {
+  max-width: 820px;
+}
+
+.ri-overview {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.8;
+  margin-bottom: 56px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border-2);
+}
+
+.ri-overview strong {
+  color: var(--terra);
+  font-weight: 500;
+}
+
+.ri-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ri-item {
+  padding: 40px 0;
+  border-bottom: 1px solid var(--border-2);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  transition: padding-left 0.3s var(--ease-out);
+  position: relative;
+}
+
+.ri-item::before {
+  content: '';
+  position: absolute;
+  left: -24px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--terra);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.ri-item:hover::before {
+  transform: scaleY(1);
+}
+
+.ri-item:hover {
+  padding-left: 16px;
+}
+
+.ri-item-header {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.ri-number {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--terra);
+  opacity: 0.7;
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+  line-height: 1;
+  padding-top: 5px;
+}
+
+.ri-item h3 {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: var(--cream);
+  line-height: 1.25;
+  transition: color 0.25s ease;
+}
+
+.ri-item:hover h3 {
+  color: var(--terra-light);
+}
+
+.ri-item p {
+  font-size: 0.94rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  padding-left: 44px;
+}
+
+/* Light mode */
+body.light-mode .ri-overview { color: var(--cream); }
+body.light-mode .ri-overview strong { color: var(--terra); }
+body.light-mode .ri-item h3 { color: var(--cream); }
+body.light-mode .ri-item:hover h3 { color: var(--terra); }
+body.light-mode .ri-item::before { background: var(--terra); }
+
+@media (max-width: 680px) {
+  .ri-overview { font-size: 1.05rem; margin-bottom: 36px; padding-bottom: 28px; }
+  .ri-item { padding: 28px 0; }
+  .ri-item:hover { padding-left: 10px; }
+  .ri-item h3 { font-size: 1.2rem; }
+  .ri-item p { padding-left: 0; font-size: 0.88rem; }
+  .ri-item-header { gap: 12px; }
+}
