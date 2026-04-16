@@ -31,6 +31,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#research">Research</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -145,64 +146,120 @@
     </div>
   </section>
 
-  <!-- ░░░ RESEARCH / PROJECTS ░░░ -->
+  <!-- ░░░ RESEARCH INTERESTS ░░░ -->
   <section id="research">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">02 — Research &amp; Projects</span>
-        <h2 class="section-title">Research Interests &amp;<br/><em>Selected Projects</em></h2>
+        <span class="section-tag">02 — Research Interests</span>
+        <h2 class="section-title">What I Work On &amp;<br/><em>Why It Matters</em></h2>
       </div>
 
-      <!-- Research Interests -->
-      <div class="interests-block">
-        <p class="interests-intro">
+      <div class="ri-body">
+        <p class="ri-overview">
           My research sits at the intersection of <strong>linguistics</strong>, <strong>machine learning</strong>,
           and <strong>cultural preservation</strong>. I am particularly drawn to problems where language complexity
-          meets data scarcity — and where the stakes for real communities are high.
+          meets data scarcity — and where the stakes for real communities are high. I believe that building
+          equitable AI means starting from the languages and cultures that have been historically left out
+          of the digital world.
         </p>
-        <div class="interests-grid">
 
-          <div class="interest-card">
-            <div class="interest-icon">🗣️</div>
-            <h4>Low-resource &amp; African Language NLP</h4>
-            <p>Designing NLP systems that work for languages with limited digital data — especially African languages that are morphologically rich, tonal, or underrepresented in mainstream benchmarks.</p>
+        <div class="ri-list">
+
+          <div class="ri-item">
+            <div class="ri-item-header">
+              <span class="ri-number">01</span>
+              <h3>Machine Translation &amp; Multilingual NLP</h3>
+            </div>
+            <p>
+              I investigate how multilingual models — such as mBART50 and MarianMT — perform across typologically
+              diverse language pairs, with a particular focus on African languages. My work examines syntactic
+              divergence, lexical ambiguity, and the limits of transfer learning when source and target languages
+              differ structurally. I am interested in both evaluation methodology and fine-tuning strategies that
+              improve translation quality for low-resource settings.
+            </p>
           </div>
 
-          <div class="interest-card">
-            <div class="interest-icon">🎙️</div>
-            <h4>Speech &amp; Tone Processing</h4>
-            <p>Investigating how tonal features in languages like Yorùbá affect ASR and TTS systems, and building models that are acoustically and tonally aware for better transcription and synthesis.</p>
+          <div class="ri-item">
+            <div class="ri-item-header">
+              <span class="ri-number">02</span>
+              <h3>Speech &amp; Tone Processing for African Languages</h3>
+            </div>
+            <p>
+              Tone is meaning. In languages like Yorùbá, the same string of consonants and vowels can carry
+              entirely different meanings depending on pitch. I study how transformer-based Automatic Speech
+              Recognition systems handle — or fail to handle — this tonal complexity, and how we can design
+              models that are acoustically and linguistically aware. This extends to Text-to-Speech synthesis
+              and the challenge of naturalness in tonal language output.
+            </p>
           </div>
 
-          <div class="interest-card">
-            <div class="interest-icon">🌐</div>
-            <h4>Machine Translation &amp; Multilingual Systems</h4>
-            <p>Evaluating and fine-tuning multilingual translation models (mBART, MarianMT) across typologically diverse language pairs, with attention to syntactic divergence and lexical ambiguity.</p>
+          <div class="ri-item">
+            <div class="ri-item-header">
+              <span class="ri-number">03</span>
+              <h3>Low-resource &amp; African Language NLP</h3>
+            </div>
+            <p>
+              Most of the world's languages remain invisible to modern NLP systems. I build tools, datasets,
+              and benchmarks for languages with little to no digital data — especially African languages that are
+              morphologically complex, dialectally diverse, or entirely absent from mainstream training corpora.
+              My goal is to close the representation gap without compromising on linguistic rigour or community
+              relevance.
+            </p>
           </div>
 
-          <div class="interest-card">
-            <div class="interest-icon">📚</div>
-            <h4>Cultural &amp; Figurative Language Understanding</h4>
-            <p>Studying how transformer models handle culturally embedded texts — proverbs, idioms, oral literature — where meaning is deeply contextual and not reducible to literal semantics.</p>
+          <div class="ri-item">
+            <div class="ri-item-header">
+              <span class="ri-number">04</span>
+              <h3>Cultural &amp; Figurative Language Understanding</h3>
+            </div>
+            <p>
+              Proverbs, idioms, and oral literature encode centuries of knowledge in forms that are deeply
+              non-literal. I study how language models process culturally embedded texts — where meaning is
+              contextual, metaphorical, and often untranslatable — and what this reveals about the gap between
+              statistical pattern-matching and genuine semantic understanding. Yorùbá proverbs have been
+              a central case study in this line of work.
+            </p>
           </div>
 
-          <div class="interest-card">
-            <div class="interest-icon">🛡️</div>
-            <h4>AI Safety &amp; Responsible AI for Africa</h4>
-            <p>Exploring how AI safety frameworks, evaluation pipelines, and governance structures can be made culturally relevant and practically useful for African contexts and communities.</p>
+          <div class="ri-item">
+            <div class="ri-item-header">
+              <span class="ri-number">05</span>
+              <h3>AI Safety, Evaluation &amp; Responsible AI for Africa</h3>
+            </div>
+            <p>
+              I am interested in how AI safety and governance frameworks can be grounded in African realities —
+              not applied as imported standards but built with the communities they affect. This includes
+              designing culturally relevant evaluation pipelines, identifying failure modes specific to
+              low-resource and multilingual settings, and advocating for inclusive benchmarking practices
+              that reflect a broader range of languages, dialects, and lived experiences.
+            </p>
           </div>
 
-          <div class="interest-card">
-            <div class="interest-icon">🧩</div>
-            <h4>Dataset Creation &amp; Linguistic Annotation</h4>
-            <p>Building high-quality, community-informed datasets and benchmarks for low-resource NLP tasks — including speech corpora, parallel text, and culturally grounded evaluation sets.</p>
+          <div class="ri-item">
+            <div class="ri-item-header">
+              <span class="ri-number">06</span>
+              <h3>Dataset Creation &amp; Linguistic Annotation</h3>
+            </div>
+            <p>
+              Good data is the foundation of good science. I design and build high-quality, community-informed
+              datasets for NLP tasks — including speech corpora, parallel texts, annotated proverb collections,
+              and dialect-specific evaluation sets. I pay close attention to annotation methodology, inter-annotator
+              agreement, and the linguistic expertise required to represent tonal, morphological, and cultural
+              features faithfully.
+            </p>
           </div>
 
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="projects-divider">
-        <span>Selected Projects</span>
+  <!-- ░░░ SELECTED PROJECTS ░░░ -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03 — Selected Projects</span>
+        <h2 class="section-title">Work in<br/><em>Language Technology</em></h2>
       </div>
 
       <div class="projects-grid">
@@ -213,7 +270,7 @@
             <span class="project-year">2025</span>
           </div>
           <h3>Tone in Yorùbá ASR</h3>
-          <p>Investigating the impact of tone recognition on transformer-based automatic speech recognition models for Yorùbá — a tonal language where meaning hinges on pitch. Research accepted to LoResLM Workshop @ EACL 2026.</p>
+          <p>Investigating the impact of tone recognition on transformer-based ASR models for Yorùbá — a tonal language where meaning hinges on pitch. Accepted to LoResLM Workshop @ EACL 2026.</p>
           <div class="project-footer">
             <span class="project-status pub">Published</span>
             <a href="https://github.com/joyolusanya" target="_blank" rel="noopener" class="project-link">View →</a>
@@ -226,7 +283,7 @@
             <span class="project-year">2024–2025</span>
           </div>
           <h3>OWE-YOR: Yorùbá Proverb Classification</h3>
-          <p>Culturally grounded semantic classification of Yorùbá proverbs in a low-resource setting. Compared Naive Bayes with transformer-based models (BERT, AfroLM), analysing morpho-semantic patterns and ambiguity in culturally embedded texts. Accepted to WiML @ NeurIPS 2025.</p>
+          <p>Culturally grounded semantic classification of Yorùbá proverbs. Compared Naive Bayes with transformer-based models (BERT, AfroLM), analysing morpho-semantic patterns in culturally embedded texts. Accepted to WiML @ NeurIPS 2025.</p>
           <div class="project-footer">
             <span class="project-status pub">Published</span>
             <a href="https://github.com/joyolusanya" target="_blank" rel="noopener" class="project-link">View →</a>
@@ -252,7 +309,7 @@
             <span class="project-year">2025</span>
           </div>
           <h3>Neural MT: English–Portuguese</h3>
-          <p>Fine-tuned Helsinki MarianMT transformer using domain-aware preprocessing strategies. Benchmarked translation quality with BLEU metrics and comparative analysis of baseline versus fine-tuned performance.</p>
+          <p>Fine-tuned Helsinki MarianMT transformer using domain-aware preprocessing strategies. Benchmarked translation quality with BLEU metrics and a comparative analysis of baseline versus fine-tuned performance.</p>
           <div class="project-footer">
             <span class="project-status">Engineering</span>
             <a href="https://github.com/joyolusanya" target="_blank" rel="noopener" class="project-link">View →</a>
@@ -278,7 +335,7 @@
             <span class="project-year">2025–Present</span>
           </div>
           <h3>YorLect: Yorùbá Dialect NLP</h3>
-          <p>Leading research to improve NLP model performance for Yorùbá and its dialects through theoretical and applied linguistics. Developing language resources, corpora, and high-quality evaluation benchmarks for low-resource NLP tasks.</p>
+          <p>Leading research to improve NLP model performance for Yorùbá and its dialects through theoretical and applied linguistics. Developing language resources, corpora, and high-quality evaluation benchmarks.</p>
           <div class="project-footer">
             <span class="project-status active">Active</span>
             <a href="https://github.com/joyolusanya" target="_blank" rel="noopener" class="project-link">View →</a>
@@ -293,7 +350,7 @@
   <section id="publications">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">03 — Publications</span>
+        <span class="section-tag">04 — Publications</span>
         <h2 class="section-title">Academic<br/><em>Contributions</em></h2>
       </div>
       <div class="pubs-list">
@@ -346,7 +403,7 @@
   <section id="experience">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">04 — Experience</span>
+        <span class="section-tag">05 — Experience</span>
         <h2 class="section-title">Professional<br/><em>Journey</em></h2>
       </div>
       <div class="timeline">
@@ -557,7 +614,7 @@
     <div class="container">
       <div class="contact-inner">
         <div class="section-header contact-header">
-          <span class="section-tag">06 — Contact</span>
+          <span class="section-tag">07 — Contact</span>
           <h2 class="section-title">Let's Build<br/><em>Something Together</em></h2>
           <p class="contact-sub">
             Interested in collaborating on African language AI, low-resource NLP, or responsible AI research?
