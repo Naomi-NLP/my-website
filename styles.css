@@ -1,31 +1,31 @@
 /* ═══════════════════════════════════════════════
    JOY OLUSANYA — Academic Portfolio
-   Aesthetic: African Scholarly Warmth
-   Palette: Deep Charcoal + Terracotta + Gold
+   Aesthetic: Midnight Blue Precision
+   Palette: Deep Black + Electric Sky Blue + White
    Fonts: Cormorant Garant (display) + DM Sans (body)
    ═══════════════════════════════════════════════ */
 
 /* ─── TOKENS ─── */
 :root {
-  --bg:         #0f0c0b;
-  --bg-2:       #161110;
-  --bg-3:       #1e1916;
-  --surface:    #241e1b;
-  --surface-2:  #2d2622;
+  --bg:         #050810;
+  --bg-2:       #080c18;
+  --bg-3:       #0c1220;
+  --surface:    #101828;
+  --surface-2:  #172035;
 
-  --terra:      #c4541a;
-  --terra-light:#e06e34;
-  --gold:       #d4a843;
-  --gold-light: #e8c068;
-  --cream:      #f0e4d0;
-  --cream-dim:  #c8b89a;
+  --terra:      #3b9eff;
+  --terra-light:#6ab8ff;
+  --gold:       #a8d8ff;
+  --gold-light: #cce8ff;
+  --cream:      #e8f4ff;
+  --cream-dim:  #9bbdd8;
 
-  --text:       #ede4d8;
-  --text-muted: #9a8a78;
-  --text-dim:   #6a5d51;
+  --text:       #daeeff;
+  --text-muted: #6e9ab8;
+  --text-dim:   #3d6480;
 
-  --border:     rgba(212, 168, 67, 0.12);
-  --border-2:   rgba(212, 168, 67, 0.06);
+  --border:     rgba(59, 158, 255, 0.14);
+  --border-2:   rgba(59, 158, 255, 0.07);
 
   --radius:     6px;
   --radius-lg:  12px;
@@ -153,7 +153,7 @@ section:nth-child(even) {
 }
 
 #navbar.scrolled {
-  background: rgba(15, 12, 11, 0.9);
+  background: rgba(5, 8, 16, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow: 0 1px 0 var(--border);
@@ -337,7 +337,7 @@ section:nth-child(even) {
 .btn-primary:hover {
   background: var(--terra-light);
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(196, 84, 26, 0.35);
+  box-shadow: 0 12px 28px rgba(59, 158, 255, 0.35);
 }
 
 .btn-ghost {
@@ -460,9 +460,9 @@ section:nth-child(even) {
   letter-spacing: 0.04em;
 }
 
-.lang-pill.native  { background: rgba(196,84,26,0.2); color: var(--terra-light); border: 1px solid rgba(196,84,26,0.3); }
-.lang-pill.fluent  { background: rgba(212,168,67,0.12); color: var(--gold-light); border: 1px solid rgba(212,168,67,0.2); }
-.lang-pill.basic   { background: rgba(240,228,208,0.07); color: var(--cream-dim); border: 1px solid rgba(240,228,208,0.12); }
+.lang-pill.native  { background: rgba(59,158,255,0.15); color: #6ab8ff; border: 1px solid rgba(59,158,255,0.3); }
+.lang-pill.fluent  { background: rgba(168,216,255,0.10); color: #cce8ff; border: 1px solid rgba(168,216,255,0.2); }
+.lang-pill.basic   { background: rgba(232,244,255,0.06); color: var(--cream-dim); border: 1px solid rgba(232,244,255,0.12); }
 
 .about-cards {
   display: grid;
@@ -545,14 +545,14 @@ section:nth-child(even) {
 .project-card:hover::before { height: 100%; }
 
 .project-card:hover {
-  border-color: rgba(196, 84, 26, 0.25);
+  border-color: rgba(59, 158, 255, 0.25);
   transform: translateY(-6px);
   box-shadow: var(--shadow);
 }
 
 .project-card.featured {
   grid-column: span 1;
-  border-color: rgba(212, 168, 67, 0.15);
+  border-color: rgba(168, 216, 255, 0.15);
 }
 
 .project-card.featured::before {
@@ -749,7 +749,7 @@ section:nth-child(even) {
   border-radius: 50%;
   background: var(--terra);
   border: 2px solid var(--bg-3);
-  box-shadow: 0 0 0 3px rgba(196, 84, 26, 0.2);
+  box-shadow: 0 0 0 3px rgba(59, 158, 255, 0.2);
 }
 
 .timeline-content {
@@ -870,8 +870,8 @@ section:nth-child(even) {
 }
 
 .skill-tag:hover {
-  background: rgba(196, 84, 26, 0.12);
-  border-color: rgba(196, 84, 26, 0.3);
+  background: rgba(59, 158, 255, 0.12);
+  border-color: rgba(59, 158, 255, 0.3);
   color: var(--terra-light);
 }
 
@@ -927,7 +927,7 @@ section:nth-child(even) {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(196, 84, 26, 0.12);
+  background: rgba(59, 158, 255, 0.12);
   border-radius: var(--radius);
   font-size: 1.1rem;
   color: var(--terra);
