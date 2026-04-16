@@ -19,9 +19,15 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">JO</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle light mode">
+          <span class="theme-icon theme-icon--dark">☀</span>
+          <span class="theme-icon theme-icon--light">☾</span>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#research">Research</a></li>
@@ -81,6 +87,12 @@
       </div>
       <div class="about-grid">
         <div class="about-text">
+          <div class="about-photo-wrap">
+            <div class="about-photo-ring">
+              <img src="photo.jpg" alt="Joy Olusanya" class="about-photo" />
+            </div>
+            <div class="about-photo-glow" aria-hidden="true"></div>
+          </div>
           <p class="lead">
             I'm a Linguistics graduate and NLP researcher with <strong>4 years of experience</strong> across
             research and engineering roles in industry and academia, building datasets, evaluation pipelines,
@@ -137,9 +149,62 @@
   <section id="research">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">02 — Research & Projects</span>
-        <h2 class="section-title">Selected Work in<br/><em>Language Technology</em></h2>
+        <span class="section-tag">02 — Research &amp; Projects</span>
+        <h2 class="section-title">Research Interests &amp;<br/><em>Selected Projects</em></h2>
       </div>
+
+      <!-- Research Interests -->
+      <div class="interests-block">
+        <p class="interests-intro">
+          My research sits at the intersection of <strong>linguistics</strong>, <strong>machine learning</strong>,
+          and <strong>cultural preservation</strong>. I am particularly drawn to problems where language complexity
+          meets data scarcity — and where the stakes for real communities are high.
+        </p>
+        <div class="interests-grid">
+
+          <div class="interest-card">
+            <div class="interest-icon">🗣️</div>
+            <h4>Low-resource &amp; African Language NLP</h4>
+            <p>Designing NLP systems that work for languages with limited digital data — especially African languages that are morphologically rich, tonal, or underrepresented in mainstream benchmarks.</p>
+          </div>
+
+          <div class="interest-card">
+            <div class="interest-icon">🎙️</div>
+            <h4>Speech &amp; Tone Processing</h4>
+            <p>Investigating how tonal features in languages like Yorùbá affect ASR and TTS systems, and building models that are acoustically and tonally aware for better transcription and synthesis.</p>
+          </div>
+
+          <div class="interest-card">
+            <div class="interest-icon">🌐</div>
+            <h4>Machine Translation &amp; Multilingual Systems</h4>
+            <p>Evaluating and fine-tuning multilingual translation models (mBART, MarianMT) across typologically diverse language pairs, with attention to syntactic divergence and lexical ambiguity.</p>
+          </div>
+
+          <div class="interest-card">
+            <div class="interest-icon">📚</div>
+            <h4>Cultural &amp; Figurative Language Understanding</h4>
+            <p>Studying how transformer models handle culturally embedded texts — proverbs, idioms, oral literature — where meaning is deeply contextual and not reducible to literal semantics.</p>
+          </div>
+
+          <div class="interest-card">
+            <div class="interest-icon">🛡️</div>
+            <h4>AI Safety &amp; Responsible AI for Africa</h4>
+            <p>Exploring how AI safety frameworks, evaluation pipelines, and governance structures can be made culturally relevant and practically useful for African contexts and communities.</p>
+          </div>
+
+          <div class="interest-card">
+            <div class="interest-icon">🧩</div>
+            <h4>Dataset Creation &amp; Linguistic Annotation</h4>
+            <p>Building high-quality, community-informed datasets and benchmarks for low-resource NLP tasks — including speech corpora, parallel text, and culturally grounded evaluation sets.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="projects-divider">
+        <span>Selected Projects</span>
+      </div>
+
       <div class="projects-grid">
 
         <article class="project-card featured">
