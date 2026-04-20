@@ -1786,3 +1786,102 @@ body.light-mode .blog-card--featured {
   top: 0 !important;
   letter-spacing: 0.02em !important;
 }
+
+/* ═══════════════════════════════════════════
+   HERO REDESIGN — BIG & BOLD
+   ═══════════════════════════════════════════ */
+
+/* Pre-title label */
+.hero-pre {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.78rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  color: var(--terra) !important;
+  margin-bottom: 24px !important;
+}
+
+/* Name block */
+.hero-name-block {
+  margin-bottom: 28px;
+  overflow: hidden;
+}
+
+.hero-name {
+  font-family: 'Cormorant Garant', serif !important;
+  font-size: clamp(3.6rem, 8vw, 7rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.05 !important;
+  letter-spacing: -0.02em !important;
+  color: var(--cream) !important;
+  margin: 0 !important;
+  /* Gradient shimmer on the name */
+  background: linear-gradient(135deg, var(--cream) 40%, var(--terra-light) 70%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.light-mode .hero-name {
+  background: linear-gradient(135deg, var(--cream) 30%, var(--terra) 70%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Tagline block */
+.hero-tagline-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 4px;
+  margin-bottom: 48px;
+}
+
+.hero-tagline-block .tagline-word {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: clamp(1rem, 2.2vw, 1.4rem) !important;
+  font-weight: 600 !important;
+  color: var(--cream) !important;
+  letter-spacing: 0.01em !important;
+  white-space: nowrap;
+  opacity: 0.92;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.hero-tagline-block .tagline-word:hover {
+  color: var(--terra-light) !important;
+  opacity: 1;
+}
+
+.tagline-sep {
+  color: var(--terra);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 300;
+  opacity: 0.6;
+  padding: 0 4px;
+}
+
+body.light-mode .hero-tagline-block .tagline-word {
+  color: var(--cream) !important;
+}
+
+body.light-mode .hero-tagline-block .tagline-word:hover {
+  color: var(--terra) !important;
+}
+
+/* Null out old tagline styles that conflict */
+.hero-tagline {
+  display: none !important;
+}
+
+@media (max-width: 680px) {
+  .hero-name {
+    font-size: clamp(2.8rem, 12vw, 4rem) !important;
+  }
+  .hero-tagline-block .tagline-word {
+    font-size: 0.9rem !important;
+  }
+  .tagline-sep { font-size: 0.9rem; }
+}
