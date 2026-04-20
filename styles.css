@@ -1768,3 +1768,8 @@ body.light-mode .blog-card--featured {
   .blog-card--featured { grid-column: span 1; }
   .blog-card--featured h3 { font-size: 1.25rem; }
 }
+
+/* ─── HERO NAME SIZE FIX ─── */
+#hero h1 {
+  font-size: clamp(3rem, 7vw, 5rem) !important;
+}
