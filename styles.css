@@ -1518,3 +1518,84 @@ body.light-mode .ri-item::before { background: var(--terra); }
   .ri-item p { padding-left: 0; font-size: 0.88rem; }
   .ri-item-header { gap: 12px; }
 }
+
+/* ─── HERO TAGLINE KEYWORDS ─── */
+.hero-tagline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 0;
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem) !important;
+  font-family: 'Cormorant Garant', serif !important;
+  font-weight: 300 !important;
+  color: var(--text-muted) !important;
+  line-height: 1.6 !important;
+}
+
+.tagline-word {
+  display: inline-block;
+  padding: 0 10px 0 0;
+  transition: color 0.25s ease;
+  cursor: default;
+  white-space: nowrap;
+}
+
+.tagline-word:not(:last-child)::after {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--terra);
+  margin-left: 10px;
+  vertical-align: middle;
+  opacity: 0.6;
+  position: relative;
+  top: -1px;
+}
+
+.tagline-word:hover {
+  color: var(--terra-light);
+}
+
+body.light-mode .tagline-word:hover {
+  color: var(--terra);
+}
+
+@media (max-width: 680px) {
+  .hero-tagline {
+    font-size: 1rem !important;
+    gap: 2px 0;
+  }
+}
+
+/* ─── HERO NAME RESIZE ─── */
+#hero h1 {
+  font-size: clamp(2.8rem, 7vw, 5.5rem) !important;
+}
+
+.hero-middle {
+  font-size: 0.55em;
+  font-style: normal;
+  font-weight: 300;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+  vertical-align: middle;
+  position: relative;
+  top: -0.1em;
+}
+
+/* ─── HERO NAME FURTHER REDUCED ─── */
+#hero h1 {
+  font-size: clamp(2rem, 5vw, 3.8rem) !important;
+}
+
+/* ─── TAGLINE BOLD ─── */
+.tagline-word {
+  font-weight: 700 !important;
+  color: var(--cream) !important;
+}
+
+body.light-mode .tagline-word {
+  color: var(--cream) !important;
+}
