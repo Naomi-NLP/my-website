@@ -2173,3 +2173,99 @@ body.light-mode .hero-badge {
   justify-content: center;
   max-width: 860px;
 }
+
+/* ─── HERO ROLE TITLE ─── */
+.hero-role {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--terra);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-role::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--terra);
+  flex-shrink: 0;
+}
+
+body.light-mode .hero-role { color: var(--terra); }
+body.light-mode .hero-role::before { background: var(--terra); }
+
+/* ─── HERO REBUILD ─── */
+.hero-pre {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--terra);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-pre::before {
+  content: '';
+  width: 36px;
+  height: 1px;
+  background: var(--terra);
+  flex-shrink: 0;
+}
+
+.hero-name-block { margin-bottom: 28px; }
+
+.hero-name {
+  font-family: 'Cormorant Garant', serif;
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-name-first {
+  font-size: clamp(5rem, 13vw, 10rem);
+  color: var(--cream);
+  display: block;
+}
+
+.hero-name-last {
+  font-size: clamp(5rem, 13vw, 10rem);
+  font-style: italic;
+  font-weight: 300;
+  display: block;
+  background: linear-gradient(120deg, var(--terra) 0%, #6ab8ff 55%, var(--terra-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-bio {
+  font-size: clamp(0.95rem, 1.6vw, 1.08rem);
+  color: var(--text-muted);
+  max-width: 560px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+body.light-mode .hero-pre { color: var(--terra); }
+body.light-mode .hero-pre::before { background: var(--terra); }
+body.light-mode .hero-name-first { color: var(--cream); }
+body.light-mode .hero-name-last {
+  background: linear-gradient(120deg, var(--terra) 0%, #2484e0 55%, #1a5ca0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
