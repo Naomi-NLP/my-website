@@ -1773,3 +1773,16 @@ body.light-mode .blog-card--featured {
 #hero h1 {
   font-size: clamp(3rem, 7vw, 5rem) !important;
 }
+
+/* ─── HERO NAME — UNIFORM SIZE ─── */
+#hero h1 {
+  font-size: clamp(2.4rem, 5vw, 3.8rem) !important;
+}
+
+.hero-middle {
+  font-size: 1em !important;
+  color: var(--text-muted) !important;
+  vertical-align: baseline !important;
+  top: 0 !important;
+  letter-spacing: 0.02em !important;
+}
