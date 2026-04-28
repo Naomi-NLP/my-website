@@ -855,3 +855,34 @@ body.light-mode .sb-name em {
   .exp-header { flex-direction: column; gap: 2px; }
   .proj-year  { margin-left: 0; }
 }
+
+/* ─── PUBLICATION LINKS ─── */
+.pub-links {
+  display: inline-flex;
+  gap: 10px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.pub-ext-link {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--blue);
+  border: 1px solid rgba(59,158,255,0.25);
+  border-radius: 100px;
+  padding: 2px 10px;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.pub-ext-link:hover {
+  background: rgba(59,158,255,0.1);
+  border-color: var(--blue);
+  color: var(--blue-light);
+}
+
+/* Google Scholar sidebar icon */
+.sb-link-icon[style="font-size:0.7rem"] {
+  font-size: 0.7rem;
+}
