@@ -886,3 +886,144 @@ body.light-mode .sb-name em {
 .sb-link-icon[style="font-size:0.7rem"] {
   font-size: 0.7rem;
 }
+
+/* ─── CALLOUT BANNER ─── */
+.callout-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--blue);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 28px 0 32px;
+}
+
+.callout-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 24px;
+}
+
+.callout-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.callout-item div { display: flex; flex-direction: column; gap: 4px; }
+
+.callout-item strong {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--cream);
+}
+
+.callout-item p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0 !important;
+}
+
+.callout-divider {
+  height: 1px;
+  background: var(--border-2);
+  margin: 0 24px;
+}
+
+.callout-cta {
+  padding: 16px 24px;
+  border-top: 1px solid var(--border-2);
+  background: rgba(59,158,255,0.04);
+}
+
+.callout-btn {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease, letter-spacing 0.2s ease;
+}
+
+.callout-btn:hover {
+  color: var(--blue-light);
+  letter-spacing: 0.05em;
+}
+
+body.light-mode .callout-banner {
+  background: var(--surface);
+  border-color: var(--border);
+  border-left-color: var(--blue);
+}
+body.light-mode .callout-cta {
+  background: rgba(26,111,196,0.04);
+}
+
+/* ─── TEACHING ─── */
+.teach-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.teach-list li {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border-2);
+}
+
+.teach-list li:last-child { border-bottom: none; }
+
+.teach-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.teach-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--cream);
+  border-bottom: 1px solid rgba(59,158,255,0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.teach-title:hover {
+  color: var(--blue-light);
+  border-color: var(--blue-light);
+}
+
+.teach-org {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--blue);
+  background: rgba(59,158,255,0.08);
+  border: 1px solid rgba(59,158,255,0.18);
+  padding: 2px 10px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.teach-list p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin: 0 0 10px !important;
+}
+
+.teach-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--blue);
+  transition: color 0.2s ease, letter-spacing 0.2s ease;
+  letter-spacing: 0.01em;
+}
+
+.teach-link:hover {
+  color: var(--blue-light);
+  letter-spacing: 0.04em;
+}
