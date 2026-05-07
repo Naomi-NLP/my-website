@@ -17,9 +17,9 @@
   --cream:       #e8f4ff;
   --cream-dim:   #9bbdd8;
 
-  --text:        #daeeff;
-  --text-muted:  #6e9ab8;
-  --text-dim:    #3d6480;
+  --text:        #ffffff;
+  --text-muted:  #c0d8f0;
+  --text-dim:    #6e9ab8;
 
   --border:      rgba(59,158,255,0.13);
   --border-2:    rgba(59,158,255,0.07);
@@ -434,8 +434,8 @@ body.light-mode .sb-theme .theme-icon--light { opacity: 1;  display: inline; }
 
 .news-year-label {
   font-family: 'Cormorant Garant', serif;
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: 1.15rem;
+  font-weight: 700;
   color: var(--blue);
   padding-top: 14px;
   letter-spacing: 0.02em;
@@ -1311,4 +1311,14 @@ body.light-mode .cv-btn-ghost {
 
 @media (max-width: 600px) {
   .proj-grid { grid-template-columns: 1fr; }
+}
+
+/* ─── CV SECTION COMPACT ─── */
+.cv-section {
+  padding: 24px 0 !important;
+  border-bottom: 1px solid var(--border-2);
+}
+
+.cv-section .cv-actions {
+  margin: 0;
 }
