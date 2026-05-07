@@ -1346,3 +1346,79 @@ body.light-mode .cv-btn-ghost {
   font-size: 0.78rem !important;
   margin-top: 6px !important;
 }
+
+/* ─── RESEARCH INTERESTS — NARRATIVE STYLE ─── */
+.ri-narrative {
+  margin-bottom: 36px;
+  max-width: 780px;
+}
+
+.ri-narrative p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.85;
+  margin-bottom: 16px !important;
+}
+
+.ri-narrative strong {
+  color: var(--cream);
+  font-weight: 600;
+}
+
+.ri-themes {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--border-2);
+}
+
+.ri-theme-item {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-2);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  transition: padding-left 0.2s ease;
+}
+
+.ri-theme-item:hover {
+  padding-left: 8px;
+  color: var(--text);
+}
+
+.ri-theme-item strong {
+  color: var(--cream);
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+body.light-mode .ri-narrative strong,
+body.light-mode .ri-theme-item strong {
+  color: #000;
+}
+
+/* ─── RESEARCH INTEREST BULLETS ─── */
+.ri-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.ri-bullets li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.97rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.ri-bullets li::before {
+  content: '●';
+  color: var(--blue);
+  font-size: 0.45rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
