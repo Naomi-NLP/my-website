@@ -1089,3 +1089,133 @@ body.light-mode .callout-cta {
   padding: 1px 5px;
   border-radius: 3px;
 }
+
+/* ─── CV SIDEBAR BUTTON ─── */
+.sb-cv-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 4px 0 20px;
+  padding: 10px 16px;
+  background: var(--blue-dim);
+  color: #fff;
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: background 0.25s ease, transform 0.2s ease;
+  border: none;
+}
+
+.sb-cv-btn:hover {
+  background: var(--blue);
+  transform: translateY(-1px);
+}
+
+/* ─── CV SECTION ─── */
+.cv-actions {
+  display: flex;
+  gap: 14px;
+  margin: 24px 0 16px;
+  flex-wrap: wrap;
+}
+
+.cv-btn-primary,
+.cv-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.cv-btn-primary {
+  background: var(--blue);
+  color: #fff;
+  border: none;
+}
+
+.cv-btn-primary:hover {
+  background: var(--blue-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(59,158,255,0.3);
+}
+
+.cv-btn-ghost {
+  background: transparent;
+  color: var(--cream);
+  border: 1px solid var(--border);
+}
+
+.cv-btn-ghost:hover {
+  border-color: var(--blue);
+  color: var(--blue-light);
+  transform: translateY(-2px);
+}
+
+.cv-btn-icon {
+  font-size: 1rem;
+}
+
+.cv-note {
+  font-size: 0.8rem !important;
+  color: var(--text-dim) !important;
+  font-style: italic;
+  margin-top: 4px !important;
+}
+
+.cv-note code {
+  font-family: monospace;
+  color: var(--blue-dim);
+  background: var(--surface);
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-style: normal;
+}
+
+body.light-mode .cv-btn-ghost {
+  color: var(--cream);
+  border-color: var(--border);
+}
+
+/* ─── PROJECTS BOX STYLE ─── */
+.proj-list li {
+  background: var(--surface);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 14px;
+  border-bottom: none !important;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.proj-list li:hover {
+  border-color: rgba(59,158,255,0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+}
+
+.proj-list li:last-child {
+  margin-bottom: 0;
+}
+
+.proj-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--blue);
+  transition: color 0.2s ease;
+}
+
+.proj-link:hover {
+  text-decoration: underline;
+  color: var(--blue-light);
+}
