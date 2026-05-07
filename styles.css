@@ -1322,3 +1322,27 @@ body.light-mode .cv-btn-ghost {
 .cv-section .cv-actions {
   margin: 0;
 }
+
+/* ─── SMALLER PROJECT CARDS ─── */
+.proj-card {
+  padding: 14px 16px !important;
+  gap: 6px !important;
+}
+
+.proj-card p {
+  font-size: 0.85rem !important;
+  line-height: 1.6 !important;
+}
+
+.proj-card .proj-title {
+  font-size: 0.92rem !important;
+}
+
+.proj-card .proj-tags {
+  font-size: 0.65rem !important;
+}
+
+.proj-link {
+  font-size: 0.78rem !important;
+  margin-top: 6px !important;
+}
