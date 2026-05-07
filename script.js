@@ -24,66 +24,10 @@ const LANG_WORDS = [
   'Ubuntu', 'Ujamaa', 'Sankofa', 'Àṣà',
 ];
 
+// Canvas particle system disabled
 (function initCanvas() {
   const canvas = document.getElementById('langCanvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  let W, H, particles;
-  const COUNT = window.innerWidth < 600 ? 20 : 35;
-
-  function resize() {
-    W = canvas.width  = window.innerWidth;
-    H = canvas.height = window.innerHeight;
-  }
-
-  function rand(a, b) { return a + Math.random() * (b - a); }
-
-  function mkParticle() {
-    return {
-      word:  LANG_WORDS[Math.floor(Math.random() * LANG_WORDS.length)],
-      x: rand(0, W), y: rand(-H * 0.1, H * 1.1),
-      vx: rand(-0.15, 0.15), vy: rand(-0.3, -0.07),
-      size: rand(10, 17),
-      alpha: rand(0.04, 0.11),
-      timer: rand(200, 600), age: 0,
-    };
-  }
-
-  function step(p) {
-    p.x += p.vx; p.y += p.vy; p.age++;
-    if (p.age > p.timer) {
-      p.vx = rand(-0.15, 0.15);
-      p.vy = rand(-0.3, -0.07);
-      p.age = 0; p.timer = rand(200, 600);
-    }
-    if (p.y < -60)   { p.y = H + 20; p.x = rand(0, W); p.word = LANG_WORDS[Math.floor(Math.random() * LANG_WORDS.length)]; }
-    if (p.y > H + 60) p.y = -20;
-    if (p.x < -100)   p.x = W + 20;
-    if (p.x > W + 100) p.x = -20;
-  }
-
-  function draw() {
-    ctx.clearRect(0, 0, W, H);
-    const isLight = document.body.classList.contains('light-mode');
-    for (const p of particles) {
-      ctx.save();
-      ctx.globalAlpha = p.alpha;
-      ctx.font = `300 ${p.size}px "Cormorant Garant", serif`;
-      ctx.fillStyle = isLight ? '#1a6fc4' : '#3b9eff';
-      ctx.fillText(p.word, p.x, p.y);
-      ctx.restore();
-      step(p);
-    }
-    requestAnimationFrame(draw);
-  }
-
-  resize();
-  particles = Array.from({ length: COUNT }, mkParticle);
-  draw();
-  window.addEventListener('resize', () => {
-    resize();
-    particles.forEach(p => { p.x = Math.min(p.x, W); p.y = Math.min(p.y, H); });
-  });
+  if (canvas) canvas.style.display = 'none';
 })();
 
 
