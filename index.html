@@ -34,7 +34,6 @@
 
     <!-- ════ SIDEBAR ════ -->
     <aside class="sidebar" id="sidebar">
-
       <div class="sidebar-inner">
 
         <!-- Photo -->
@@ -83,6 +82,7 @@
             <span>Hugging Face</span>
           </a>
         </div>
+
         <!-- CV Download -->
         <a href="cv.pdf" download class="sb-cv-btn">
           <span>⬇</span> Download CV
@@ -91,13 +91,14 @@
         <!-- Nav -->
         <nav class="sb-nav" id="sbNav">
           <a href="#intro"        class="sb-nav-link" data-section="intro">Introduction</a>
+          <a href="#cv"           class="sb-nav-link" data-section="cv">CV</a>
           <a href="#news"         class="sb-nav-link" data-section="news">News</a>
           <a href="#research"     class="sb-nav-link" data-section="research">Research Interests</a>
           <a href="#publications" class="sb-nav-link" data-section="publications">Publications</a>
           <a href="#projects"     class="sb-nav-link" data-section="projects">Projects</a>
           <a href="#experience"   class="sb-nav-link" data-section="experience">Experience</a>
           <a href="#service"      class="sb-nav-link" data-section="service">Service</a>
-          <a href="#teaching"    class="sb-nav-link" data-section="teaching">Teaching</a>
+          <a href="#teaching"     class="sb-nav-link" data-section="teaching">Teaching</a>
           <a href="#blog"         class="sb-nav-link" data-section="blog">Blog</a>
         </nav>
 
@@ -122,7 +123,7 @@
         <div class="cs-divider"></div>
 
         <p>
-          Hi there👋 My name is <strong>Joy Olusanya</strong>, a Linguistics graduate and NLP Researcher with
+          Hi there 👋 My name is <strong>Joy Olusanya</strong>, a Linguistics graduate and NLP Researcher with
           <strong>4+ years of experience</strong> across research and engineering roles in industry and academia.
           I build datasets, evaluation pipelines, and multilingual NLP systems with a focus on
           <strong>low-resource and African languages</strong>.
@@ -202,6 +203,29 @@
             <span><strong>Deep Learning Indaba Travel Grant</strong> — DL Indaba Conference, Kigali, Rwanda</span>
           </div>
         </div>
+      </section>
+
+      <!-- ── CV ── -->
+      <section id="cv" class="content-section cv-section">
+        <h2 class="cs-heading">Curriculum Vitae</h2>
+        <div class="cs-divider"></div>
+        <p>
+          My full CV covers my research experience, publications, teaching, community service,
+          and technical skills. Last updated <strong>2025</strong>.
+        </p>
+        <div class="cv-actions">
+          <a href="cv.pdf" download class="cv-btn-primary">
+            <span class="cv-btn-icon">⬇</span>
+            Download CV (PDF)
+          </a>
+          <a href="cv.pdf" target="_blank" rel="noopener" class="cv-btn-ghost">
+            <span class="cv-btn-icon">↗</span>
+            View in Browser
+          </a>
+        </div>
+        <p class="cv-note">
+          Place <code>cv.pdf</code> in the same folder as <code>index.html</code> in your GitHub repo.
+        </p>
       </section>
 
       <!-- ── News ── -->
@@ -323,83 +347,48 @@
         </p>
 
         <div class="ri-list">
-
           <div class="ri-item">
             <div class="ri-item-header">
               <span class="ri-number">01</span>
               <h3>Machine Translation &amp; Multilingual NLP</h3>
             </div>
-            <p>
-              I investigate how multilingual models — such as mBART50 and MarianMT — perform across typologically
-              diverse language pairs, with a particular focus on African languages. My work examines syntactic
-              divergence, lexical ambiguity, and the limits of transfer learning when source and target languages
-              differ structurally.
-            </p>
+            <p>I investigate how multilingual models — such as mBART50 and MarianMT — perform across typologically diverse language pairs, with a particular focus on African languages. My work examines syntactic divergence, lexical ambiguity, and the limits of transfer learning when source and target languages differ structurally.</p>
           </div>
-
           <div class="ri-item">
             <div class="ri-item-header">
               <span class="ri-number">02</span>
               <h3>Speech &amp; Tone Processing for African Languages</h3>
             </div>
-            <p>
-              Tone is meaning. In languages like Yorùbá, the same string of consonants and vowels can carry
-              entirely different meanings depending on pitch. I study how transformer-based ASR systems handle —
-              or fail to handle — this tonal complexity, and how we can design models that are acoustically
-              and linguistically aware.
-            </p>
+            <p>Tone is meaning. In languages like Yorùbá, the same string of consonants and vowels can carry entirely different meanings depending on pitch. I study how transformer-based ASR systems handle — or fail to handle — this tonal complexity, and how we can design models that are acoustically and linguistically aware.</p>
           </div>
-
           <div class="ri-item">
             <div class="ri-item-header">
               <span class="ri-number">03</span>
               <h3>Low-resource &amp; African Language NLP</h3>
             </div>
-            <p>
-              Most of the world's languages remain invisible to modern NLP systems. I build tools, datasets,
-              and benchmarks for languages with little to no digital data — especially African languages that are
-              morphologically complex, dialectally diverse, or entirely absent from mainstream training corpora.
-            </p>
+            <p>Most of the world's languages remain invisible to modern NLP systems. I build tools, datasets, and benchmarks for languages with little to no digital data — especially African languages that are morphologically complex, dialectally diverse, or entirely absent from mainstream training corpora.</p>
           </div>
-
           <div class="ri-item">
             <div class="ri-item-header">
               <span class="ri-number">04</span>
               <h3>Cultural &amp; Figurative Language Understanding</h3>
             </div>
-            <p>
-              Proverbs, idioms, and oral literature encode centuries of knowledge in forms that are deeply
-              non-literal. I study how language models process culturally embedded texts — where meaning is
-              contextual, metaphorical, and often untranslatable. Yorùbá proverbs have been a central case
-              study in this line of work.
-            </p>
+            <p>Proverbs, idioms, and oral literature encode centuries of knowledge in forms that are deeply non-literal. I study how language models process culturally embedded texts — where meaning is contextual, metaphorical, and often untranslatable. Yorùbá proverbs have been a central case study in this line of work.</p>
           </div>
-
           <div class="ri-item">
             <div class="ri-item-header">
               <span class="ri-number">05</span>
               <h3>AI Safety, Evaluation &amp; Responsible AI for Africa</h3>
             </div>
-            <p>
-              I am interested in how AI safety and governance frameworks can be grounded in African realities —
-              not imported standards but systems built with the communities they affect. This includes designing
-              culturally relevant evaluation pipelines and advocating for inclusive benchmarking practices.
-            </p>
+            <p>I am interested in how AI safety and governance frameworks can be grounded in African realities — not imported standards but systems built with the communities they affect. This includes designing culturally relevant evaluation pipelines and advocating for inclusive benchmarking practices.</p>
           </div>
-
           <div class="ri-item">
             <div class="ri-item-header">
               <span class="ri-number">06</span>
               <h3>Dataset Creation &amp; Linguistic Annotation</h3>
             </div>
-            <p>
-              Good data is the foundation of good science. I design and build high-quality, community-informed
-              datasets — including speech corpora, parallel texts, annotated proverb collections, and
-              dialect-specific evaluation sets — with close attention to annotation methodology and
-              linguistic rigour.
-            </p>
+            <p>Good data is the foundation of good science. I design and build high-quality, community-informed datasets — including speech corpora, parallel texts, annotated proverb collections, and dialect-specific evaluation sets — with close attention to annotation methodology and linguistic rigour.</p>
           </div>
-
         </div>
       </section>
 
@@ -407,7 +396,6 @@
       <section id="publications" class="content-section">
         <h2 class="cs-heading">Publications</h2>
         <div class="cs-divider"></div>
-
         <ul class="pub-list">
           <li>
             <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LqB6xIQAAAAJ&citation_for_view=LqB6xIQAAAAJ:Ug5p-4gJ2f0C" target="_blank" rel="noopener" class="pub-title-link">Tone in Yorùbá Automatic Speech Recognition: Evaluating the Impact of Tone Recognition on Transformer-Based ASR Models</a><br/>
@@ -431,213 +419,162 @@
       </section>
 
       <!-- ── Projects ── -->
-<section id="projects" class="content-section">
-  <h2 class="cs-heading">Selected Projects</h2>
-  <div class="cs-divider"></div>
+      <section id="projects" class="content-section">
+        <h2 class="cs-heading">Selected Projects</h2>
+        <div class="cs-divider"></div>
 
-  <div class="proj-grid">
-
-    <div class="proj-card">
-      <div class="proj-header">
-        <a href="https://github.com/joyolusanya" target="_blank" rel="noopener" class="proj-title">
-          Tone in Yorùbá ASR
-        </a>
-        <span class="proj-year">2025</span>
-      </div>
-      <span class="proj-tags">ASR · Tonology · Yorùbá</span>
-      <p>Investigating tone recognition in transformer-based ASR for Yorùbá, where meaning depends on pitch. Accepted to LoResLM @ EACL 2026.</p>
-
-      <a href="https://github.com/joyolusanya" target="_blank" rel="noopener" class="proj-link">
-        View Project →
-      </a>
-    </div>
-
-    <div class="proj-card">
-      <div class="proj-header">
-        <a href="https://github.com/joyolusanya" target="_blank" rel="noopener" class="proj-title">
-          OWE-YOR: Yorùbá Proverb Classification
-        </a>
-        <span class="proj-year">2024–2025</span>
-      </div>
-      <span class="proj-tags">NLP · Classification · Low-resource</span>
-      <p>Culturally grounded classification of Yorùbá proverbs using Naive Bayes and transformers (BERT, AfroLM).</p>
-
-      <a href="https://github.com/joyolusanya" target="_blank" rel="noopener" class="proj-link">
-        View Project →
-      </a>
-    </div>
-
-    <div class="proj-card">
-      <div class="proj-header">
-        <a href="https://github.com/joyolusanya" target="_blank" rel="noopener" class="proj-title">
-          YorLect: Yorùbá Dialect NLP
-        </a>
-        <span class="proj-year">2025–Present</span>
-      </div>
-      <span class="proj-tags">Multilingual · African AI · Datasets</span>
-      <p>Developing NLP resources and evaluation benchmarks for Yorùbá and its dialects.</p>
-
-      <a href="https://github.com/joyolusanya" target="_blank" rel="noopener" class="proj-link">
-        View Project →
-      </a>
-    </div>
-
-  </div>
-</section>
+        <div class="proj-grid">
+          <div class="proj-card">
+            <div class="proj-header">
+              <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LqB6xIQAAAAJ&citation_for_view=LqB6xIQAAAAJ:Ug5p-4gJ2f0C" target="_blank" rel="noopener" class="proj-title">Tone in Yorùbá ASR</a>
+              <span class="proj-year">2025</span>
+            </div>
+            <span class="proj-tags">ASR · Tonology · Yorùbá</span>
+            <p>Investigating tone recognition in transformer-based ASR for Yorùbá, where meaning depends on pitch. Accepted to LoResLM @ EACL 2026.</p>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LqB6xIQAAAAJ&citation_for_view=LqB6xIQAAAAJ:Ug5p-4gJ2f0C" target="_blank" rel="noopener" class="proj-link">View Project →</a>
+          </div>
+          <div class="proj-card">
+            <div class="proj-header">
+              <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LqB6xIQAAAAJ&citation_for_view=LqB6xIQAAAAJ:ruyezt5ZtCIC" target="_blank" rel="noopener" class="proj-title">OWE-YOR: Yorùbá Proverb Classification</a>
+              <span class="proj-year">2024–2025</span>
+            </div>
+            <span class="proj-tags">NLP · Classification · Low-resource</span>
+            <p>Culturally grounded classification of Yorùbá proverbs using Naive Bayes and transformers (BERT, AfroLM). Accepted to WiML @ NeurIPS 2025.</p>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LqB6xIQAAAAJ&citation_for_view=LqB6xIQAAAAJ:ruyezt5ZtCIC" target="_blank" rel="noopener" class="proj-link">View Project →</a>
+          </div>
+          <div class="proj-card">
+            <div class="proj-header">
+              <a href="https://github.com/Naomi-NLP" target="_blank" rel="noopener" class="proj-title">YorLect: Yorùbá Dialect NLP</a>
+              <span class="proj-year">2025–Present</span>
+            </div>
+            <span class="proj-tags">Multilingual · African AI · Datasets</span>
+            <p>Developing NLP resources and evaluation benchmarks for Yorùbá and its dialects.</p>
+            <a href="https://github.com/Naomi-NLP" target="_blank" rel="noopener" class="proj-link">View Project →</a>
+          </div>
+        </div>
+      </section>
 
       <!-- ── Experience ── -->
-<section id="experience" class="content-section">
-  <h2 class="cs-heading">Experience</h2>
-  <div class="cs-divider"></div>
+      <section id="experience" class="content-section">
+        <h2 class="cs-heading">Experience</h2>
+        <div class="cs-divider"></div>
 
-  <ul class="exp-list">
+        <ul class="exp-list">
 
-    <!-- ── Leadership & Service ── -->
-    <li>
-      <h3 class="exp-section-title">Leadership</h3>
-    </li>
+          <li><h3 class="exp-section-title">Leadership</h3></li>
 
-    <li>
-      <div class="exp-header">
-        <span class="exp-role">Founder &amp; CEO</span>
-        <span class="exp-date">2026 – Present</span>
-      </div>
-      <span class="exp-org">Center for Low-Resource Languages and Cultures (CLRLC) · Nigeria</span>
+          <li>
+            <div class="exp-header">
+              <span class="exp-role">Founder &amp; CEO</span>
+              <span class="exp-date">2026 – Present</span>
+            </div>
+            <span class="exp-org">Center for Low-Resource Languages and Cultures (CLRLC) · Nigeria</span>
+            <ul class="exp-bullets">
+              <li>Leading initiatives focused on low-resource language research, preservation, and AI development.</li>
+              <li>Coordinating research, community, and educational programs for multilingual and low-resource language technologies.</li>
+              <li>Building collaborations that promote linguistic diversity and inclusive NLP innovation across Africa and beyond.</li>
+            </ul>
+          </li>
 
-      <ul class="exp-bullets">
-        <li>Leading initiatives focused on low-resource language research, preservation, and AI development.</li>
-        <li>Coordinating research, community, and educational programs for multilingual and low-resource language technologies.</li>
-        <li>Building collaborations that promote linguistic diversity and inclusive NLP innovation across Africa and beyond.</li>
-      </ul>
-    </li>
+          <li>
+            <div class="exp-header">
+              <span class="exp-role">Executive Secretary &amp; Founder Support Assistant (Internship)</span>
+              <span class="exp-date">2026 – Present</span>
+            </div>
+            <span class="exp-org">Female Founders Tribe · Remote</span>
+            <ul class="exp-bullets">
+              <li>Support founders with meeting coordination, reminders, and logistics for internal and external meetings.</li>
+              <li>Draft and manage emails, follow-ups, and internal/external communication.</li>
+              <li>Track tasks, deadlines, and administrative requests while supporting file management and record-keeping.</li>
+            </ul>
+          </li>
 
-    <li>
-      <div class="exp-header">
-        <span class="exp-role">Executive Secretary &amp; Founder Support Assistant (Internship)</span>
-        <span class="exp-date">2026 – Present</span>
-      </div>
-      <span class="exp-org">Female Founders Tribe · Remote</span>
+          <li><h3 class="exp-section-title">Research Experience</h3></li>
 
-      <ul class="exp-bullets">
-        <li>Support founders with meeting coordination, reminders, and logistics for internal and external meetings.</li>
-        <li>Draft and manage emails, follow-ups, and internal/external communication.</li>
-        <li>Track tasks, deadlines, and administrative requests while supporting file management and record-keeping.</li>
-      </ul>
-    </li>
+          <li>
+            <div class="exp-header">
+              <span class="exp-role">NLP Researcher &amp; Yorùbá Language Lead</span>
+              <span class="exp-date">Aug 2025 – Present</span>
+            </div>
+            <span class="exp-org">Tonative · Nigeria (Remote)</span>
+            <ul class="exp-bullets">
+              <li>Developed multilingual NLP datasets for low-resource African languages, ensuring linguistic diversity.</li>
+              <li>Applied NLLB-200M for machine translation from English to Kikuyu, Kinyarwanda, and Yorùbá using the XNLI dataset for evaluation and research publication.</li>
+              <li>Benchmarked models using OpenAI healthcare datasets to evaluate performance and data quality.</li>
+              <li>Directed data annotation and validation workflows to produce high-quality Yoruba datasets.</li>
+            </ul>
+          </li>
 
-    <!-- ── Research Experience ── -->
-    <li>
-      <h3 class="exp-section-title">Research Experience</h3>
-    </li>
+          <li>
+            <div class="exp-header">
+              <span class="exp-role">NLP / ML Engineer Lead</span>
+              <span class="exp-date">Aug 2025 – Present</span>
+            </div>
+            <span class="exp-org">YorLect · Nigeria (Remote)</span>
+            <ul class="exp-bullets">
+              <li>Contributing to research initiatives focused on improving NLP model performance for Yorùbá and its dialects.</li>
+              <li>Supporting model training, evaluation, and deployment workflows.</li>
+            </ul>
+          </li>
 
-    <li>
-      <div class="exp-header">
-        <span class="exp-role">NLP Researcher &amp; Yorùbá Language Lead</span>
-        <span class="exp-date">Aug 2025 – Present</span>
-      </div>
-      <span class="exp-org">Tonative · Nigeria (Remote)</span>
+          <li>
+            <div class="exp-header">
+              <span class="exp-role">AI Developer</span>
+              <span class="exp-date">Jan 2024 – Mar 2025</span>
+            </div>
+            <span class="exp-org">Brilla AI Project, Kwame AI · Ghana (Remote)</span>
+            <ul class="exp-bullets">
+              <li>Validated and curated diverse speech datasets to improve transcription accuracy and model reliability.</li>
+              <li>Built reproducible preprocessing and evaluation pipelines for scalable experimentation.</li>
+            </ul>
+          </li>
 
-      <ul class="exp-bullets">
-        <li>Developed multilingual NLP datasets for low-resource African languages, ensuring linguistic diversity.</li>
-        <li>Applied NLLB-200M for machine translation from English to Kikuyu, Kinyarwanda, and Yorùbá using the XNLI dataset for evaluation and research publication.</li>
-        <li>Benchmarked models using OpenAI healthcare datasets to evaluate performance and data quality.</li>
-        <li>Directed data annotation and validation workflows to produce high-quality Yoruba datasets.</li>
-      </ul>
-    </li>
+          <li><h3 class="exp-section-title">Industry Experience</h3></li>
 
-    <li>
-      <div class="exp-header">
-        <span class="exp-role">NLP / ML Engineer Lead</span>
-        <span class="exp-date">Aug 2025 – Present</span>
-      </div>
-      <span class="exp-org">YorLect · Nigeria (Remote)</span>
+          <li>
+            <div class="exp-header">
+              <span class="exp-role">AI / LLM Developer</span>
+              <span class="exp-date">Apr 2025</span>
+            </div>
+            <span class="exp-org">Atom Group (Contract) · Nigeria (Remote)</span>
+            <ul class="exp-bullets">
+              <li>Developed a commercial AI agent with Instagram scraping pipelines for social media intelligence.</li>
+              <li>Built modular automation systems for large-scale data collection and API integration.</li>
+            </ul>
+          </li>
 
-      <ul class="exp-bullets">
-        <li>Contributing to research initiatives focused on improving NLP model performance for Yorùbá and its dialects.</li>
-        <li>Supporting model training, evaluation, and deployment workflows.</li>
-      </ul>
-    </li>
+          <li>
+            <div class="exp-header">
+              <span class="exp-role">ML / NLP Engineer</span>
+              <span class="exp-date">Jun 2024 – Dec 2024</span>
+            </div>
+            <span class="exp-org">Rendo AI Nigeria · Nigeria (Remote)</span>
+            <ul class="exp-bullets">
+              <li>Designed Python-based web scraping pipelines using Requests, Selenium, and BeautifulSoup.</li>
+              <li>Automated large-scale data acquisition workflows, improving efficiency and dataset completeness.</li>
+            </ul>
+          </li>
 
-    <li>
-      <div class="exp-header">
-        <span class="exp-role">AI Developer</span>
-        <span class="exp-date">Jan 2024 – Mar 2025</span>
-      </div>
-      <span class="exp-org">Brilla AI Project, Kwame AI · Ghana (Remote)</span>
+        </ul>
+      </section>
 
-      <ul class="exp-bullets">
-        <li>Validated and curated diverse speech datasets to improve transcription accuracy and model reliability.</li>
-        <li>Built reproducible preprocessing and evaluation pipelines for scalable experimentation.</li>
-      </ul>
-    </li>
-
-    <!-- ── Industry Experience ── -->
-    <li>
-      <h3 class="exp-section-title">Industry Experience</h3>
-    </li>
-
-    <li>
-      <div class="exp-header">
-        <span class="exp-role">AI / LLM Developer</span>
-        <span class="exp-date">Apr 2025</span>
-      </div>
-      <span class="exp-org">Atom Group (Contract) · Nigeria (Remote)</span>
-
-      <ul class="exp-bullets">
-        <li>Developed a commercial AI agent with Instagram scraping pipelines for social media intelligence.</li>
-        <li>Built modular automation systems for large-scale data collection and API integration.</li>
-      </ul>
-    </li>
-
-    <li>
-      <div class="exp-header">
-        <span class="exp-role">ML / NLP Engineer</span>
-        <span class="exp-date">Jun 2024 – Dec 2024</span>
-      </div>
-      <span class="exp-org">Rendo AI Nigeria · Nigeria (Remote)</span>
-
-      <ul class="exp-bullets">
-        <li>Designed Python-based web scraping pipelines using Requests, Selenium, and BeautifulSoup.</li>
-        <li>Automated large-scale data acquisition workflows, improving efficiency and dataset completeness.</li>
-      </ul>
-    </li>
-
-  </ul>
-</section>
-      
-</section>
       <!-- ── Service ── -->
       <section id="service" class="content-section">
         <h2 class="cs-heading">Community Service</h2>
         <div class="cs-divider"></div>
 
         <ul class="service-list">
+          <li><strong>Founder &amp; CEO</strong>, Center for Low-Resource Languages and Cultures (CLRLC)</li>
+          <li><strong>Workshop Chair</strong>, CLRLC-LLMs Workshop @ NeurIPS 2025 — Mexico City</li>
+          <li><strong>Reviewer</strong>, Deep Learning Indaba Ideathon 2025</li>
+          <li><strong>Training Manager</strong>, Tonative Data Academy (Jan 2026 – Present)</li>
+          <li><strong>AI / Machine Learning Lead</strong>, Women in Data Science Nigeria (WiDS) (Oct 2024 – Nov 2025)</li>
+          <li><strong>Deep Learning / AI Co-Lead</strong>, Data Science Nigeria (Jan 2025 – Nov 2025)</li>
+          <li><strong>AI Mentor</strong>, LevelUp Techies Bootcamp (Sep–Nov 2024)</li>
           <li>
-            <strong>Founder &amp; CEO</strong>, Center for Low-Resource Languages and Cultures (CLRLC)
-          </li>
-          <li>
-            <strong>Workshop Chair</strong>, CLRLC-LLMs Workshop @ NeurIPS 2025 — Mexico City
-          </li>
-          <li>
-            <strong>Reviewer</strong>, Deep Learning Indaba Ideathon 2025
-          </li>
-          <li>
-            <strong>Training Manager</strong>, Tonative Data Academy (Jan 2026 – Present) 
-          </li>
-          <li>
-            <strong>AI / Machine Learning Lead</strong>, Women in Data Science Nigeria (WiDS) (Oct 2024 – Nov 2025)
-          </li>
-          <li>
-            <strong>Deep Learning / AI Co-Lead</strong>, Data Science Nigeria (Jan 2025 – Nov 2025)
-          </li>
-          <li>
-            <strong>AI Mentor</strong>, LevelUp Techies Bootcamp (Sep–Nov 2024)
-          </li>
-        </ul>
-           <strong>Open Contributor</strong>, Cohere &amp; Cohere Labs — contributed to 500+ translation validations for multilingual AI datasets, supporting low-resource and African language coverage.
+            <strong>Open Contributor</strong>, Cohere &amp; Cohere Labs — contributed to 500+ translation validations for multilingual AI datasets, supporting low-resource and African language coverage.
             <span class="service-cert">
-              <a href="https://drive.google.com/file/d/1aKJPBQ7qUJhex0WO_d5ocOiT8J3u-aK9/view?usp=sharing" class="cert-link" id="cohereCert">View Certificate ↗</a>
-              <span class="cert-note">Replace <code>#</code> with your certificate link</span>
+              <a href="https://drive.google.com/file/d/1aKJPBQ7qUJhex0WO_d5ocOiT8J3u-aK9/view?usp=sharing" target="_blank" rel="noopener" class="cert-link">📄 View Certificate ↗</a>
             </span>
           </li>
         </ul>
@@ -678,16 +615,16 @@
         <h2 class="cs-heading">Teaching</h2>
         <div class="cs-divider"></div>
         <p>
-          I actively teach and develop educational materials on AI, NLP, Deep Learning and Linguistics. Below are my lecture slides that I have delivered to learners across various skill levels.
+          I actively teach and develop educational materials on AI, NLP, Deep Learning and Linguistics.
+          Below are my lecture slides delivered to learners across various skill levels.
         </p>
-
         <ul class="teach-list">
           <li>
             <div class="teach-header">
               <a href="https://docs.google.com/presentation/d/157p0XasOWUTFjwzlpQmWHEouQRxWXltV/edit?usp=sharing&ouid=112580307966474660713&rtpof=true&sd=true" target="_blank" rel="noopener" class="teach-title">Introduction to Deep Learning</a>
               <span class="teach-org">DSN OAU Chapter</span>
             </div>
-            <p>Lecture slides introducing core concepts of deep learning neural network fundamentals, activation functions, backpropagation, and practical applications. Delivered to students at Obafemi Awolowo University.</p>
+            <p>Lecture slides introducing core concepts of deep learning — neural network fundamentals, activation functions, backpropagation, and practical applications. Delivered to students at Obafemi Awolowo University.</p>
             <a href="https://docs.google.com/presentation/d/157p0XasOWUTFjwzlpQmWHEouQRxWXltV/edit?usp=sharing&ouid=112580307966474660713&rtpof=true&sd=true" target="_blank" rel="noopener" class="teach-link">View Slides ↗</a>
           </li>
           <li>
@@ -695,7 +632,7 @@
               <a href="https://docs.google.com/presentation/d/1hjxJm-_atz_blKQIhfrg64fUetW8ImDM/edit?usp=sharing&ouid=112580307966474660713&rtpof=true&sd=true" target="_blank" rel="noopener" class="teach-title">Fundamentals of Neural Networks</a>
               <span class="teach-org">DSN OAU Chapter</span>
             </div>
-            <p>A foundational lecture on neural network architectures perceptrons, multilayer networks, forward and backward propagation, and hands-on examples to build intuition from the ground up.</p>
+            <p>A foundational lecture on neural network architectures — perceptrons, multilayer networks, forward and backward propagation, and hands-on examples to build intuition from the ground up.</p>
             <a href="https://docs.google.com/presentation/d/1hjxJm-_atz_blKQIhfrg64fUetW8ImDM/edit?usp=sharing&ouid=112580307966474660713&rtpof=true&sd=true" target="_blank" rel="noopener" class="teach-link">View Slides ↗</a>
           </li>
           <li>
@@ -703,7 +640,7 @@
               <a href="https://docs.google.com/presentation/d/1GsaYiWtrZNpqmbnbIgnnoRYf9s2H_gHg/edit?usp=sharing&ouid=102569462299872877932&rtpof=true&sd=true" target="_blank" rel="noopener" class="teach-title">Fundamentals of Artificial Intelligence &amp; Natural Language Processing</a>
               <span class="teach-org">Tonative Data Academy</span>
             </div>
-            <p>An accessible introduction to AI and NLP covering the history of AI, core NLP tasks, language models, and real world applications, with examples drawn from African language contexts.</p>
+            <p>An accessible introduction to AI and NLP — covering the history of AI, core NLP tasks, language models, and real-world applications, with examples drawn from African language contexts.</p>
             <a href="https://docs.google.com/presentation/d/1GsaYiWtrZNpqmbnbIgnnoRYf9s2H_gHg/edit?usp=sharing&ouid=102569462299872877932&rtpof=true&sd=true" target="_blank" rel="noopener" class="teach-link">View Slides ↗</a>
           </li>
           <li>
@@ -711,7 +648,7 @@
               <a href="https://docs.google.com/presentation/d/1NdIFzdsqjTAPx9Ev1p_uwMUfeWu3k4G4/edit?usp=sharing&ouid=102569462299872877932&rtpof=true&sd=true" target="_blank" rel="noopener" class="teach-title">Introduction to Data &amp; Types of NLP Datasets</a>
               <span class="teach-org">Tonative Data Academy</span>
             </div>
-            <p>A practical lecture on data for NLP types of datasets, annotation methods, quality control, dataset creation pipelines, and the particular challenges of building data for low-resource African languages.</p>
+            <p>A practical lecture on data for NLP — types of datasets, annotation methods, quality control, dataset creation pipelines, and the particular challenges of building data for low-resource African languages.</p>
             <a href="https://docs.google.com/presentation/d/1NdIFzdsqjTAPx9Ev1p_uwMUfeWu3k4G4/edit?usp=sharing&ouid=102569462299872877932&rtpof=true&sd=true" target="_blank" rel="noopener" class="teach-link">View Slides ↗</a>
           </li>
         </ul>
@@ -721,23 +658,23 @@
       <section id="blog" class="content-section">
         <h2 class="cs-heading">Blog</h2>
         <div class="cs-divider"></div>
-        <p class="cs-intro">Writing on African NLP, language technology, AI research, and the side of building in tech. Published on <a href="https://medium.com/@joynaomi81" target="_blank" rel="noopener" class="text-link">Medium ↗</a></p>
+        <p class="cs-intro">Writing on African NLP, language technology, AI research, and the human side of building in tech. Published on <a href="https://medium.com/@joynaomi81" target="_blank" rel="noopener" class="text-link">Medium ↗</a></p>
 
         <ul class="blog-list">
           <li>
             <a href="https://medium.com/@joynaomi81/code-and-compass-starting-out-in-tech-2587a02f2e3d" target="_blank" rel="noopener" class="blog-list-title">Code and Compass: Starting Out in Tech</a>
             <span class="blog-list-tag">Career · Tech</span>
-            <p>A personal reflection on beginning a journey in technology the challenges, the lessons, and what it really means to find your footing in a fast-moving field.</p>
+            <p>A personal reflection on beginning a journey in technology — the challenges, the lessons, and what it really means to find your footing in a fast-moving field.</p>
           </li>
           <li>
             <a href="https://medium.com/@joynaomi81/from-proposal-to-workshop-my-journey-as-workshop-chair-at-clrlc-llms-neurips-2025-2286a7e6b282" target="_blank" rel="noopener" class="blog-list-title">From Proposal to Workshop: My Journey as Workshop Chair at CLRLC-LLMs, NeurIPS 2025</a>
             <span class="blog-list-tag">Research · Community</span>
-            <p>Behind the scenes of organising an international research workshop at NeurIPS from writing the proposal to the day itself in Mexico City.</p>
+            <p>Behind the scenes of organising an international research workshop at NeurIPS — from writing the proposal to the day itself in Mexico City.</p>
           </li>
           <li>
             <a href="https://medium.com/@joynaomi81/date-and-time-manipulation-with-python-a8968851b6f8" target="_blank" rel="noopener" class="blog-list-title">Date and Time Manipulation with Python</a>
             <span class="blog-list-tag">Python · Programming</span>
-            <p>A practical guide to working with dates and times in Python covering the datetime module, timezone handling, formatting, and real world use cases.</p>
+            <p>A practical guide to working with dates and times in Python — covering the datetime module, timezone handling, formatting, and real-world use cases.</p>
           </li>
         </ul>
       </section>
