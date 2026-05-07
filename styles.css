@@ -167,12 +167,11 @@ ul { list-style: none; }
   margin-bottom: 8px;
 }
 .sb-name em {
-  font-style: italic;
-  font-weight: 300;
-  background: linear-gradient(120deg, var(--blue-dim), var(--blue-light));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--cream);
+  -webkit-text-fill-color: var(--cream);
+  background: none;
 }
 .sb-title {
   font-size: 0.85rem;
@@ -183,7 +182,7 @@ ul { list-style: none; }
 }
 .sb-affil {
   font-size: 0.78rem;
-  color: var(--blue);
+  color: var(--text-muted);
   letter-spacing: 0.08em;
   font-weight: 400;
 }
@@ -841,10 +840,9 @@ body.light-mode .mobile-bar {
   border-bottom-color: rgba(0,0,0,0.1);
 }
 body.light-mode .sb-name em {
-  background: linear-gradient(120deg, var(--blue-dim), var(--blue-light));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: none;
+  -webkit-text-fill-color: #000;
+  color: #000;
 }
 body.light-mode .sb-link { color: #2a2a2a; }
 body.light-mode .sb-link:hover { background: rgba(26,111,196,0.08); color: var(--blue); }
