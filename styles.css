@@ -1748,3 +1748,66 @@ body.light-mode .talk-photo-wrap { background: #e8e8e8; }
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(59,158,255,0.35);
 }
+
+/* ─── PROJECTS — boxed stacked list ─── */
+.proj-flat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.proj-flat-item {
+  padding: 24px 26px;
+  background: var(--surface);
+  border: 1px solid var(--border-2);
+  border-radius: 12px;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.proj-flat-item:hover {
+  border-color: rgba(59,158,255,0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.proj-flat-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: rgba(59,158,255,0.1);
+  border: 1px solid rgba(59,158,255,0.22);
+  padding: 3px 12px;
+  border-radius: 100px;
+  margin-bottom: 12px;
+}
+
+.proj-flat-title {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.proj-flat-title a {
+  color: var(--cream);
+  transition: color 0.2s ease;
+}
+.proj-flat-title a:hover { color: var(--blue-light); }
+
+.proj-flat-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 12px !important;
+}
+
+.proj-flat-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--blue);
+  transition: color 0.2s ease;
+}
+.proj-flat-link:hover { color: var(--blue-light); }
