@@ -15,19 +15,33 @@
   <!-- ░░ BACKGROUND CANVAS ░░ -->
   <canvas id="langCanvas" aria-hidden="true"></canvas>
 
-  <!-- ░░ MOBILE TOP BAR ░░ -->
-  <div class="mobile-bar">
-    <span class="mobile-logo">Joy Olusanya</span>
-    <div class="mobile-controls">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-        <span class="theme-icon theme-icon--dark">☀</span>
-        <span class="theme-icon theme-icon--light">☾</span>
-      </button>
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
+  <!-- ░░ TOP HEADER MENU ░░ -->
+  <header class="topbar" id="topbar">
+    <div class="topbar-inner">
+      <nav class="topbar-nav" id="topbarNav">
+        <a href="#intro"        class="tb-nav-link" data-section="intro">About Me</a>
+        <a href="#news"         class="tb-nav-link" data-section="news">News</a>
+        <a href="#research"     class="tb-nav-link" data-section="research">Research Interests</a>
+        <a href="#publications" class="tb-nav-link" data-section="publications">Publications</a>
+        <a href="#talks"        class="tb-nav-link" data-section="talks">Talks</a>
+        <a href="#projects"     class="tb-nav-link" data-section="projects">Projects</a>
+        <a href="#experience"   class="tb-nav-link" data-section="experience">Experience</a>
+        <a href="#service"      class="tb-nav-link" data-section="service">Service</a>
+        <a href="#teaching"     class="tb-nav-link" data-section="teaching">Teaching</a>
+        <a href="#blog"         class="tb-nav-link" data-section="blog">Blog</a>
+      </nav>
+
+      <div class="topbar-controls">
+        <button class="theme-toggle" id="themeToggleTop" aria-label="Toggle theme">
+          <span class="theme-icon theme-icon--dark">☀</span>
+          <span class="theme-icon theme-icon--light">☾</span>
+        </button>
+        <button class="nav-toggle" id="navToggleTop" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
-  </div>
+  </header>
 
   <!-- ░░ LAYOUT WRAPPER ░░ -->
   <div class="layout">
@@ -39,7 +53,7 @@
         <!-- Photo -->
         <div class="sb-photo-wrap">
           <div class="sb-photo-ring">
-            <img src="photo.jpg" alt="Joy Olusanya" class="sb-photo" />
+            <img src="images/photo.jpg" alt="Joy Olusanya" class="sb-photo" />
           </div>
           <div class="sb-photo-glow" aria-hidden="true"></div>
         </div>
@@ -89,19 +103,6 @@
         </a>
 
         <!-- Nav -->
-        <nav class="sb-nav" id="sbNav">
-          <a href="#intro"        class="sb-nav-link" data-section="intro">Introduction</a>
-          <a href="#cv"           class="sb-nav-link" data-section="cv">CV</a>
-          <a href="#news"         class="sb-nav-link" data-section="news">News</a>
-          <a href="#research"     class="sb-nav-link" data-section="research">Research Interests</a>
-          <a href="#publications" class="sb-nav-link" data-section="publications">Publications</a>
-          <a href="#projects"     class="sb-nav-link" data-section="projects">Projects</a>
-          <a href="#experience"   class="sb-nav-link" data-section="experience">Experience</a>
-          <a href="#service"      class="sb-nav-link" data-section="service">Service</a>
-          <a href="#teaching"     class="sb-nav-link" data-section="teaching">Teaching</a>
-          <a href="#blog"         class="sb-nav-link" data-section="blog">Blog</a>
-        </nav>
-
         <!-- Theme Toggle (desktop) -->
         <div class="sb-bottom">
           <button class="theme-toggle sb-theme" id="themeToggleDesktop" aria-label="Toggle theme">
@@ -119,7 +120,7 @@
 
       <!-- ── Introduction ── -->
       <section id="intro" class="content-section">
-        <h2 class="cs-heading">Introduction</h2>
+        <h2 class="cs-heading">About Me</h2>
         <div class="cs-divider"></div>
 
         <p>
@@ -319,6 +320,41 @@
             </span>
           </li>
         </ul>
+      </section>
+
+      <!-- ── Talks ── -->
+      <section id="talks" class="content-section">
+        <h2 class="cs-heading">Talks</h2>
+        <div class="cs-divider"></div>
+
+        <div class="talks-grid">
+
+          <div class="talk-card">
+            <div class="talk-photo-wrap">
+              <img src="images/talk-owe-yor.jpg" alt="ÒWE-YOR poster presentation at Deep Learning Indaba" class="talk-photo" />
+            </div>
+            <div class="talk-body">
+              <h3 class="talk-title">ÒWE-YOR: Leveraging Transformer-Based Models for Yorùbá Proverb Classification</h3>
+              <p class="talk-desc">Poster presentation at Deep Learning Indaba, Kigali, Rwanda — earning the 🏆 Best Poster Award for work on culturally grounded Yorùbá proverb classification.</p>
+              <a href="#publications" class="talk-link">View Publication →</a>
+            </div>
+          </div>
+
+          <div class="talk-card">
+            <div class="talk-photo-wrap">
+              <img src="images/talk-dli2026-panel.jpg" alt="An Introspective Look at the African AI Landscape — Deep Learning Indaba 2026 panel" class="talk-photo talk-photo--contain" />
+            </div>
+            <div class="talk-body">
+              <h3 class="talk-title">An Introspective Look at the African AI Landscape Workshop</h3>
+              <p class="talk-desc">
+                Served as a panelist at <strong>Deep Learning Indaba 2026</strong>, Lagos, Nigeria, in a workshop titled
+                <em>"An Introspective Look at the African AI Landscape"</em>.
+              </p>
+              <a href="https://sites.google.com/berkeley.edu/introspectivelookatafricaai/home" target="_blank" rel="noopener" class="talk-link">View Workshop Details →</a>
+            </div>
+          </div>
+
+        </div>
       </section>
 
       <!-- ── Projects ── -->
