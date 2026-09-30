@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Service, Joy Olusanya</title>
+  <meta name="description" content="Joy Olusanya, NLP Researcher specializing in AI for African languages, low-resource NLP, and multilingual systems." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ░░ BACKGROUND CANVAS ░░ -->
+  <canvas id="langCanvas" aria-hidden="true"></canvas>
+
+  <!-- ░░ TOP HEADER MENU ░░ -->
+  <header class="topbar" id="topbar">
+    <div class="topbar-inner">
+      <nav class="topbar-nav" id="topbarNav">
+        <a href="index.html#intro"        class="tb-nav-link" data-section="intro">About Me</a>
+        <a href="index.html#news"         class="tb-nav-link" data-section="news">News</a>
+        <a href="index.html#publications" class="tb-nav-link" data-section="publications">Publications</a>
+        <a href="index.html#talks"        class="tb-nav-link" data-section="talks">Talks</a>
+        <a href="index.html#projects"     class="tb-nav-link" data-section="projects">Projects</a>
+        <a href="index.html#experience"   class="tb-nav-link" data-section="experience">Experience</a>
+        <a href="index.html#service"      class="tb-nav-link" data-section="service">Service</a>
+        <a href="index.html#teaching"     class="tb-nav-link" data-section="teaching">Teaching</a>
+        <a href="index.html#mentorship"   class="tb-nav-link" data-section="mentorship">Mentorship</a>
+        <a href="index.html#blog"         class="tb-nav-link" data-section="blog">Blog</a>
+      </nav>
+
+      <div class="topbar-controls">
+        <button class="theme-toggle" id="themeToggleTop" aria-label="Toggle theme">
+          <span class="theme-icon theme-icon--dark">☀</span>
+          <span class="theme-icon theme-icon--light">☾</span>
+        </button>
+        <button class="nav-toggle" id="navToggleTop" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ░░ LAYOUT WRAPPER ░░ -->
+  <div class="layout">
+
+    <!-- ════ SIDEBAR ════ -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-inner">
+
+        <!-- Photo -->
+        <div class="sb-photo-wrap">
+          <div class="sb-photo-ring">
+            <img src="images/photo.jpg" alt="Joy Olusanya" class="sb-photo" />
+          </div>
+          <div class="sb-photo-glow" aria-hidden="true"></div>
+        </div>
+
+        <!-- Name + Title -->
+        <div class="sb-identity">
+          <h1 class="sb-name">Joy (Naomi) <em>Olusanya</em></h1>
+          <p class="sb-title"> Computational Linguist &amp; NLP Research Engineer</p>
+          <p class="sb-affil">Linguistics · African Languages · AI</p>
+        </div>
+
+        <!-- Contact Links -->
+        <div class="sb-links">
+          <a href="mailto:joynaomiolusanya@gmail.com" class="sb-link">
+            <span class="sb-link-icon">✉</span>
+            <span>joynaomiolusanya [at] gmail.com</span>
+          </a>
+          <a href="https://x.com/Naomi_Joy___" target="_blank" rel="noopener" class="sb-link">
+            <span class="sb-link-icon">𝕏</span>
+            <span>Twitter / X</span>
+          </a>
+          <a href="https://github.com/Naomi-NLP" target="_blank" rel="noopener" class="sb-link">
+            <span class="sb-link-icon">⌥</span>
+            <span>GitHub</span>
+          </a>
+          <a href="https://linkedin.com/in/joy-olusanya" target="_blank" rel="noopener" class="sb-link">
+            <span class="sb-link-icon">in</span>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://medium.com/@joynaomi81" target="_blank" rel="noopener" class="sb-link">
+            <span class="sb-link-icon">M</span>
+            <span>Medium</span>
+          </a>
+          <a href="https://scholar.google.com/citations?user=LqB6xIQAAAAJ&hl=en" target="_blank" rel="noopener" class="sb-link">
+            <span class="sb-link-icon">GS</span>
+            <span>Google Scholar</span>
+          </a>
+          <a href="https://huggingface.co/NaomiNLP" target="_blank" rel="noopener" class="sb-link">
+            <span class="sb-link-icon">🤗</span>
+            <span>Hugging Face</span>
+          </a>
+        </div>
+
+        <!-- CV -->
+        <a href="Joy Olusanya CV.pdf" target="_blank" rel="noopener" class="sb-cv-btn">
+          <span>↗</span> View CV
+        </a>
+
+        <!-- Nav -->
+        <!-- Theme Toggle (desktop) -->
+        <div class="sb-bottom">
+          <button class="theme-toggle sb-theme" id="themeToggleDesktop" aria-label="Toggle theme">
+            <span class="theme-icon theme-icon--dark">☀</span>
+            <span class="theme-icon theme-icon--light">☾</span>
+            <span class="sb-theme-label">Toggle theme</span>
+          </button>
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- ════ MAIN CONTENT ════ -->
+    <main class="main-content">
+
+      <!-- ── Full Community Service History ── -->
+      <section id="service-full" class="content-section">
+        <a href="index.html#service" class="text-link">← Back to Home</a>
+        <h2 class="cs-heading" style="margin-top: 16px;">Community Service, Full History</h2>
+        <div class="cs-divider"></div>
+
+        <h3 class="cs-subheading" style="margin-top: 0;">Dataset Curation</h3>
+        <ul class="service-list">
+          <li>
+            <strong>Open Contributor</strong>, Cohere &amp; Cohere Labs, contributed to 500+ translation validations for multilingual AI datasets, supporting low-resource and African language coverage.
+            <span class="service-cert">
+              <a href="https://drive.google.com/file/d/1aKJPBQ7qUJhex0WO_d5ocOiT8J3u-aK9/view?usp=sharing" target="_blank" rel="noopener" class="cert-link">View Certificate ↗</a>
+            </span>
+          </li>
+        </ul>
+
+        <h3 class="cs-subheading">Conference Reviewer</h3>
+        <ul class="service-list">
+          <li>Served as a <strong>Reviewer</strong> for NeurIPS 2026 Main Conference Papers and as an <strong>Ethics Reviewer</strong></li>
+          <li>Served as a <strong>Reviewer</strong> for the ICML 2026 Pluralistic Alignment Workshop</li>
+          <li>Served as a <strong>Reviewer</strong> for the Deep Learning Indaba Awards 2026 and Startup &amp; Dataset Track 2026</li>
+          <li>Served as a <strong>Reviewer</strong> for the Deep Learning Indaba Ideathon 2025</li>
+          <li>Served as a <strong>Reviewer</strong> for the Tonative × YPIT Storytelling Hackathon 2026</li>
+        </ul>
+
+        <h3 class="cs-subheading">Mentorship</h3>
+        <ul class="service-list">
+          <li><strong>Mentor</strong>, NeurIPS 2026 Affinity Group Mentorship, guiding mentees on research paper submissions</li>
+          <li>Served as a <strong>Mentor</strong> (in person), Deep Learning Indaba 2026</li>
+          <li><strong>AI / Machine Learning Lead</strong>, Women in Data Science Nigeria (WiDS) (Oct 2024 – Nov 2025)</li>
+          <li><strong>Deep Learning / AI Co-Lead</strong>, Data Science Nigeria (Jan 2025 – Nov 2025)</li>
+          <li><strong>AI Mentor</strong>, LevelUp Techies Bootcamp (Sep–Nov 2024)</li>
+        </ul>
+
+        <h3 class="cs-subheading">Speaking Engagement</h3>
+        <ul class="service-list">
+          <li><strong>Panelist</strong>, "An Introspective Look at the African AI Landscape" at Deep Learning Indaba 2026, Lagos, Nigeria</li>
+          <li><strong>Poster Presentation</strong>, ÒWE-YOR: Leveraging Transformer-Based Models for Yorùbá Proverb Classification at Deep Learning Indaba, Kigali, Rwanda (🏆 Best Poster Award)</li>
+        </ul>
+
+        <h3 class="cs-subheading">Event Organiser &amp; Planner</h3>
+        <ul class="service-list">
+          <li>Served as <strong>Workshop Chair</strong> for the CLRLC-LLMs Workshop @ NeurIPS 2025, Mexico City</li>
+          <li><strong>Workshop Organiser</strong>, Tonative Workshop @ Deep Learning Indaba 2026</li>
+        </ul>
+
+        <h3 class="cs-subheading">Skills &amp; Tools</h3>
+        <div class="skills-inline">
+          <span class="skill-chip">Python</span>
+          <span class="skill-chip">PyTorch</span>
+          <span class="skill-chip">TensorFlow</span>
+          <span class="skill-chip">Scikit-learn</span>
+          <span class="skill-chip">Transformers</span>
+          <span class="skill-chip">spaCy</span>
+          <span class="skill-chip">NLTK</span>
+          <span class="skill-chip">LangChain</span>
+          <span class="skill-chip">BLEU</span>
+          <span class="skill-chip">ROUGE</span>
+          <span class="skill-chip">BERTScore</span>
+          <span class="skill-chip">COMET</span>
+          <span class="skill-chip">Docker</span>
+          <span class="skill-chip">MLflow</span>
+          <span class="skill-chip">AWS</span>
+          <span class="skill-chip">GCP</span>
+          <span class="skill-chip">FastAPI</span>
+          <span class="skill-chip">Streamlit</span>
+          <span class="skill-chip">OpenAI API</span>
+          <span class="skill-chip">Praat</span>
+          <span class="skill-chip">ELAN</span>
+          <span class="skill-chip">FLEx</span>
+          <span class="skill-chip">Audacity</span>
+          <span class="skill-chip">SQL</span>
+          <span class="skill-chip">Julia</span>
+        </div>
+      </section>
+
+      <!-- ── Footer ── -->
+      <footer class="main-footer">
+        <p>© 2025 Joy Olusanya · Building AI that speaks Africa's voices.</p>
+      </footer>
+
+    </main>
+
+  </div><!-- /layout -->
+
+  <script src="script.js"></script>
+</body>
+</html>
